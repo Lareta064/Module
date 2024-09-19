@@ -1,0 +1,134 @@
+// @font-face {
+// 	font-family: 'Roboto Regular';
+// 	src: url('../fonts/Roboto-Regular.eot');
+// 	src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+// 		url('../fonts/Roboto-Regular.woff') format('woff'),
+// 		url('../fonts/Roboto-Regular.ttf') format('truetype');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+// @font-face {
+// 	font-family: 'Roboto Medium';
+// 	src: url('../fonts/Roboto-Medium.eot');
+// 	src: url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+// 		url('../fonts/Roboto-Medium.woff') format('woff'),
+// 		url('../fonts/Roboto-Medium.ttf') format('truetype');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: 400;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	color: $text;
+	font-family: $reg;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+}
+
+.noscroll {
+	overflow: hidden;
+	touch-action: none;
+	-ms-touch-action: none;
+	height: 100vh;
+
+	@media(min-width:1200px) {
+		padding-right: 18px;
+	}
+}
+
+#overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(30, 65, 89, .2);
+	// backdrop-filter: blur(5px);
+	z-index: 5;
+}
+
+#overlay.active {
+	display: block;
+
+}
+
+a,
+a:hover {
+	text-decoration: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+	padding: 0;
+	margin: 0;
+}
+
+figure {
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+input,
+button,
+button:focus,
+input:focus {
+	outline: none;
+	border: none;
+}
+
+button {
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+	cursor: pointer;
+	font-family: inherit;
+}
+
+input[type="submit"] {
+	padding: 0;
+	cursor: pointer;
+}
+
+input[type="radio"],
+input[type='checkbox'],
+input[type="submit"] {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
