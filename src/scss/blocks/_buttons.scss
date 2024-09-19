@@ -1,0 +1,41 @@
+.btn,
+.btn-next,
+.btn-prev{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 12px;
+	transition: .3s;
+	svg{
+		flex-shrink: 0;
+	}
+}
+.btn{
+	width: fit-content;
+	column-gap:10px;
+	height: 54px;
+	padding-inline: 30px;
+	background-color: $ac1;
+	font-weight: 500;
+	font-size: 16px;
+	color: $pr;
+	&[disabled]{opacity: 0.4; pointer-events: none; cursor: default;}
+	
+			
+		
+}
+.btn:hover{
+	background-color: $ac2;
+}
+.btn-next, .btn-prev{
+	border: 1px solid $sec1;
+	background-color: $sec2;
+	padding: 13px 20px;
+	width: 46px;
+	height: 46px;
+	
+	&:hover{
+		border: 1px solid $ac2;
+		svg{color:$ac2;}
+	}
+}
