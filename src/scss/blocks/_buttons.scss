@@ -1,6 +1,6 @@
 .btn,
 .btn-next,
-.btn-prev{
+.btn-prev, .btn-dark{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -10,27 +10,34 @@
 		flex-shrink: 0;
 	}
 }
-.btn{
+.btn, .btn-dark{
 	width: fit-content;
 	column-gap:10px;
 	height: 54px;
-	padding-inline: 30px;
+	padding-inline: 20px;
+	min-width: 167px;
 	background-color: $ac1;
 	font-weight: 500;
 	font-size: 16px;
 	color: $pr;
 	&[disabled]{opacity: 0.4; pointer-events: none; cursor: default;}
-	
-			
-		
 }
 .btn:hover{
 	background-color: $ac2;
 }
+.btn-dark{
+	height: 46px;
+	font-size: 14px;
+	background-color: $ac3;
+	color: white;
+	svg{color: white;}
+	&:hover{
+		background-color: $ac4;
+	}
+}
 .btn-next, .btn-prev{
 	border: 1px solid $sec1;
 	background-color: $sec2;
-	padding: 13px 20px;
 	width: 46px;
 	height: 46px;
 	
