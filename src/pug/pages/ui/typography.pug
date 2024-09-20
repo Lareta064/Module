@@ -10,6 +10,7 @@ html(lang="ru")
 
 		//====убрать синий цвет у ссылок в сафари ========
 		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../fonts/fonts.css")
 		link(rel="stylesheet", href="../css/main.css")
 		title UI-KIT
 
@@ -22,9 +23,90 @@ html(lang="ru")
 				h2 Типографика
 
 				.container-dashboard__content
-					ul
-						li
-							.h1 Главный заголовок
-							pre.
-								.h1 Главный заголовок
+					.h1 Заголовок 102px
+					pre.
+						.h1 Заголовок 102px
+					hr
+					.h2 Заголовок 56px
+					pre.
+						.h2 Заголовок 56px
+					hr
+					.h3 Заголовок 42px
+					pre.
+						.h3 Заголовок 42px
+					hr
+					.h4 Заголовок 28px
+					pre.
+						.h4 Заголовок 28px
+					br
+					//- texts
+					h3 Тексты
+					br
+					.bold-24 bold 24px
+					pre.
+						.bold-24 bold 24px
+					hr
+					.semi-24 semi 24px
+					pre.
+						.semi-24 semi 24px
+					hr
+					.medium-24 medium 24px
+					pre.
+						.medium-24 medium 24px
+					hr
+					.reg-24 reg 24px
+					pre.
+						.reg-24 reg 24px
+					hr
+					.bold-20 .bold-20
+					pre.
+						.bold-20 bold-20
+					hr
+					.semi-20 semi-20
+					pre.
+						.semi-20 semi-20
+					hr
+					.medium-20 medium-20
+					pre.
+						.medium-20 medium-20
+					hr
+					.reg-20 reg 20px
+					pre.
+						.reg-20 reg 20px
+					hr
+					.bold-18 .bold-18
+					pre.
+						.bold-18 bold-18
+					hr
+					.semi-18 semi-18
+					pre.
+						.semi-18 semi-18
+					hr
+					.medium-18 medium-18
+					pre.
+						.medium-18 medium-18
+					hr
+					.reg-18 reg 18px
+					pre.
+						.reg-18 reg 18px
 					
+					//- LINKS
+					a(href="#!").link Политика обработки персональных данных
+					pre.
+						a(href="#!").link Политика обработки персональных данных
+					hr
+					a(href="#!").link-icon
+						+svg-ui('book')
+						| Текст ссылки
+					pre.
+						a(href="#!").link-icon
+							+svg('book')
+							| Текст ссылки
+
+					p.icon-txt
+						+svg-ui('book')
+						| Текст ссылки
+					pre.
+						p.icon-txt
+							+svg('book')
+							| Текст ссылки

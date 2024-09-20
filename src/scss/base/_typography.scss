@@ -1,6 +1,75 @@
-.h1{
-	font-size: 50px;
+.h1, .h2, .h3, .h4{
+	font-family: $tf;
+	color: $pr;
 	font-weight: 700;
-	line-height: 2;
-	text-transform: uppercase;
+	line-height: 1.1;
+}
+.h1{
+	font-size: 102px;
+	line-height: 1;
+}
+.h2{
+	font-size: 56px;
+	
+}
+.h3 {
+	font-size: 42px;
+	
+}
+.h4{
+	font-size: 28px;
+	
+}
+.bold-24, .medium-24, .semi-24, .reg-24,.bold-20,
+.medium-20,
+.semi-20,
+.reg-20 {
+  font-family: $ff;
+  font-size: 24px;
+  line-height: 1.2;
+}
+.bold-24, .bold-20, .bold-18{font-weight: 700;}
+.semi-24,.semi-20,.semi-18 {font-weight: 600;}
+.medium-24,.medium-20,.medium-18 {font-weight: 500;}
+.bold-18, .medium-18, .semi-18 {
+	font-size: 18px;
+	line-height: 1.3;
+}
+.bold-20,
+.medium-20,
+.semi-20,
+.reg-20{font-size: 20px;}
+.bold-18,
+.medium-18,
+.semi-18,
+.reg-18 {
+	font-size: 18px;
+}
+.txt-upper{text-transform: uppercase;}
+.txt-bold{font-weight: 700;}
+.txt-semi{font-weight: 600;}
+.txt-medium {font-weight: 500;}
+	
+/*LINKS*/
+.link, .link-icon{
+	display: inline-flex;
+	align-items: center;
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+	color: $sec;
+	transition: .3s;
+	column-gap: 6px;
+	
+	&:hover{
+		color: $ac2;
+		text-decoration: underline;
+		svg{color: $ac2; }
+	}
+}
+.link-icon, .link-icon:hover{
+	text-decoration: none;
+}
+.icon-txt{
+	column-gap:6px;
+	
 }
