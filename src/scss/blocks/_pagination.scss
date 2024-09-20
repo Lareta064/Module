@@ -1,0 +1,21 @@
+.pagination{
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+	&-item{
+		width: 28px;
+		height: 28px;
+		line-height: 28px;
+		text-align: center;
+		border-radius: 50%;
+		flex-shrink: 0;
+		font-size: 14px;
+		transition: .3s; 
+		&:hover{
+			background-color: $sec2;
+		}
+		&.active{background-color: $ac1;}
+	}
+	&-next{}
+	&-prev{}
+}
