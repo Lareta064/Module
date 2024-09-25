@@ -1,0 +1,28 @@
+.nav-menu{
+	li, a{
+		color: white;
+		font-weight: 500;
+		font-size: 16px;
+	}
+	&-item{
+		position: relative;
+		padding-block:10px;
+		svg{color: white;}
+		&:hover{
+			.nav-menu-link,svg{
+				color: $ac1;
+			}
+		}
+	}
+	&-link{
+		padding: 10px;
+		transition: .3s; 
+		
+	}
+	.nav-menu-drop{
+		position: absolute;
+		top: 100%;
+
+
+	}
+}

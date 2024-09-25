@@ -1,0 +1,15 @@
+.header{
+	padding-block:30px;
+	background-color: $pr;
+	
+	.logo{
+		display: flex;
+		width: 105px;
+		height: 113px;
+		img, svg{
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}
