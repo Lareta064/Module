@@ -1,0 +1,14 @@
+.brand-card{
+	width: 217px;
+	height: 132px;
+	border-radius: 20px;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img{
+		width: 155px;
+		height: 88px;
+		object-fit: contain;
+	}
+}

@@ -2,8 +2,7 @@ mixin prod-card(img, txt1, txt2, price)
 	//====card===
 	a(href="#!").product-card
 		.product-card__img
-			picture
-				img.lazy.wh-100(src="./img/product"+img+".webp", srcset="./img/product"+img+"@2x.webp 2x" width="335" height="208" alt="img")
+			img.lazy.wh-100(src="./img/product"+img+".webp", srcset="./img/product"+img+"@2x.webp 2x" width="335" height="208" alt="img")
 		
 		.product-card__text
 			p !{txt1}

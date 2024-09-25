@@ -20,7 +20,7 @@ html(lang="ru")
 		include ../../ui/ui-navigation.pug
 
 		block content
-			.container-dashboard
+			.container-dashboard(style="background-color: #f5f5f5")
 				h2 Компоненты меню
 
 				.container-dashboard__content
@@ -48,3 +48,7 @@ html(lang="ru")
 					pre.
 						+prod-card(1, 'Кирпич, Солома 1 НФ', 'Старый Оскол', 44)
 						+prod-card(img, txt1, txt2, price)
+					hr
+					+brand-card-ui(1)
+					pre.
+						+brand-card(1)
