@@ -1,15 +1,31 @@
 .header{
 	padding-block:30px;
 	background-color: $pr;
-	
+
 	.logo{
 		display: flex;
 		width: 105px;
 		height: 113px;
+		flex-shrink: 0;
 		img, svg{
 			width: 100%;
 			height: 100%;
 			object-fit: contain;
 		}
 	}
+}
+.header-desk-content{
+	column-gap: 30px;
+	.logo{margin-right: 10px;}
+}
+.header-right{
+	flex-shrink: 0;
+}
+.header-center{
+	flex-grow: 1;
+	justify-content: space-between;
+}
+.header-center-row{
+	column-gap:30px;
+
 }

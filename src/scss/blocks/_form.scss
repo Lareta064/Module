@@ -11,3 +11,39 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #fff inset;
    box-shadow: 0 0 0px 1000px #fff inset;
 }
+.form-item{
+  position: relative;
+  input{
+    display: block;
+    width: 100%;
+    font-family: $ff;
+    font-size: 16px;
+    height: 54px;
+    border-radius: 12px;
+    padding-inline: 16px;
+    background-color: transparent;
+    &::placeholder{
+      font-size: 16px;
+      font-family: $ff;
+      color: inherit;
+    }
+  }
+}
+.search-form{
+  flex-grow: 1;
+  input{
+    padding-right: 44px;
+    border: 1px solid $sec1;
+    color: $sec2;
+  }
+  .search-btn{
+    position: absolute;
+    top: 1px;
+    right: 0;
+    z-index: 2;
+    height: 50px;
+    width: 44px;
+    cursor:pointer;
+    border-radius: 12px;
+  }
+}

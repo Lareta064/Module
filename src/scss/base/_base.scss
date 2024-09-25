@@ -86,6 +86,7 @@ button {
 	box-shadow: none;
 	cursor: pointer;
 	font-family: inherit;
+	background: none;
 }
 
 input[type="submit"] {
@@ -104,16 +105,18 @@ input[type="submit"] {
 .d-grid{
 	display: grid;
 }
-.flex-row, .flex-center, .flex-center-x, .flex-center-y, .icon-txt, .tabs-btns, .pagination,.stat-item,
-.nav-menu,
-.header-desk-content{display: flex; column-gap:10px;}
-.flex-center-x,.flex-center, .tabs-btns, .pagination,.stat-item,
-.nav-menu{
+.flex-center-y,.stat-item,.pagination,.tabs-btns,.nav-menu,.header-center-row,.flex-center{
+	display: flex;
 	align-items: center;
+	column-gap: 10px;
 }
-.flex-center-y, .flex-center{
+.flex-row, .flex-center, .flex-center-x, .icon-txt,  
+
+.header-desk-content,.header-center{display: flex; column-gap:10px;}
+
+.flex-center-x, .flex-center{
 	justify-content: center;
 }
-.flex-column{
+.flex-column,.header-center{
 	flex-direction: column;
 }
