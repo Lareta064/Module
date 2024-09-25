@@ -44,6 +44,7 @@ html(lang="ru")
 							p.accent-bold >20
 							p Лет на рынке<br>cтроительства
 					hr
-					a(href="#!").product-card
-						.product-card__img
-							img(src="./img/product1.webp", alt="img")
+					+prod-card-ui(1, 'Кирпич, Солома 1 НФ', 'Старый Оскол', 44)
+					pre.
+						+prod-card(1, 'Кирпич, Солома 1 НФ', 'Старый Оскол', 44)
+						+prod-card(img, txt1, txt2, price)
