@@ -1,0 +1,10 @@
+.stat-item{
+	font-weight: 600;
+	font-size: 18px;
+	text-transform: uppercase;
+	.accent-bold{
+		font-family: $sf; 
+		line-height: 1.1;
+		font-size: 55px;
+	}
+}

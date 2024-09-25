@@ -97,8 +97,8 @@ input[type="submit"] {
 .d-grid{
 	display: grid;
 }
-.flex-row, .flex-center, .flex-center-x, .flex-center-y, .icon-txt{display: flex;}
-.flex-center-x,.flex-center{
+.flex-row, .flex-center, .flex-center-x, .flex-center-y, .icon-txt, .tabs-btns, .pagination,.stat-item{display: flex; column-gap:10px;}
+.flex-center-x,.flex-center, .tabs-btns, .pagination,.stat-item{
 	align-items: center;
 }
 .flex-center-y, .flex-center{

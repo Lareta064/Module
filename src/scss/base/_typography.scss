@@ -45,8 +45,11 @@
 .reg-18 {
 	font-size: 18px;
 }
+.txt-accent, .accent-bold{
+	color: $ac2;
+}
 .txt-upper{text-transform: uppercase;}
-.txt-bold{font-weight: 700;}
+.txt-bold, .accent-bold{font-weight: 700;}
 .txt-semi{font-weight: 600;}
 .txt-medium {font-weight: 500;}
 	

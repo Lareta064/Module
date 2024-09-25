@@ -10,7 +10,9 @@ html(lang="ru")
 
 		//====убрать синий цвет у ссылок в сафари ========
 		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../fonts/fonts.css")
 		link(rel="stylesheet", href="../css/main.css")
+
 		title UI-KIT
 
 	body.body-dashboard
@@ -25,3 +27,19 @@ html(lang="ru")
 					include ../../blocks/_pagination
 					pre.
 						include ../blocks/_pagination
+					.tabs
+						.tabs-btns
+							button.tab-btn.active Кирпич
+							button.tab-btn Утепление
+							button.tab-btn Тротуарная плитка
+							button.tab-btn Все для камина
+							button.tab-btn Кровля
+					hr
+					.stat-item
+						p.accent-bold >20
+						p Лет на рынке троительства
+					
+					pre.
+						.stat-item
+							p.accent-bold >20
+							p Лет на рынке<br>cтроительства

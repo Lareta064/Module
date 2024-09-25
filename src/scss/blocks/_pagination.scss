@@ -1,6 +1,4 @@
 .pagination{
-	display: flex;
-	align-items: center;
 	column-gap: 10px;
 	&-item{
 		width: 28px;
@@ -16,6 +14,4 @@
 		}
 		&.active{background-color: $ac1;}
 	}
-	&-next{}
-	&-prev{}
 }
