@@ -1,6 +1,6 @@
 header.header.header-desk
 	.container
-		.header-desk-content
+		.header-desk-content.gap-30
 			a(href="#!").logo
 				+svg('logo')
 			.header-center
@@ -15,6 +15,7 @@ header.header.header-desk
 					li.nav-menu-item.nav-menu-has-drop
 						a(href="#!").nav-menu-link Услуги
 						span.nav-menu-arrow
+							+svg('chevronDown')
 						//===drop menu ===
 						.nav-menu-drop
 							nav
@@ -39,8 +40,20 @@ header.header.header-desk
 					form.search-form
 						.form-item
 							input(type="search" name="search_input" placeholder="Поиск")
+							
+							button(type="reset").input-clear-btn
+								+svg('cross')
+							
 							button.search-btn
 								+svg('search')
 
 
 			.header-right
+				.flex-row.gap-30
+					button.btn Написать
+						+svg('email')
+					a(href="#!").social-link
+						+svg('inst')
+				a(href="#!").link-icon.phone-link
+					+svg('phone')
+					| +7 (918) 829-99-30

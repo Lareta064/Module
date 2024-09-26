@@ -7,7 +7,10 @@
 	
 	&-link{
 		padding: 10px;
-		transition: .3s; 
+		transition: .3s;
+		@media (max-width: 1199px) {
+			padding: 10px 6px;
+		}
 		
 	}
 	.nav-menu-drop{
@@ -40,14 +43,14 @@
 		position: relative;
 		padding-block: 10px;
 
-		svg {
+		.svg-chevronDown {
 			color: white;
 		}
 
 		&:hover {
 
 			.nav-menu-link,
-			svg {
+			.svg-chevronDown {
 				color: $ac2;
 			}
 		}

@@ -13,19 +13,47 @@
 			object-fit: contain;
 		}
 	}
+	@media (max-width: 1199px) {
+		padding-block: 15px;
+		.logo{width: 70px; height: 75px; margin-right: 0;}
+	}
 }
 .header-desk-content{
-	column-gap: 30px;
+	
 	.logo{margin-right: 10px;}
 }
 .header-right{
 	flex-shrink: 0;
+	.phone-link{
+		color: white;
+		height: 54px;
+		margin-top: 10px;
+		.svg-phone{color: white;}
+		&:hover{
+			color: $ac2;
+			.svg-phone{color: $ac2;}
+		}
+	}
+	
+}
+.phone-link {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 1.2;
+	transition: .3s;
+	@media (max-width: 1199px) {
+		font-size: 18px;
+	}
 }
 .header-center{
 	flex-grow: 1;
 	justify-content: space-between;
+	min-height: 118px;
 }
 .header-center-row{
 	column-gap:30px;
-
+	@media (max-width: 1199px) {
+		column-gap: 20px;
+	}
+	
 }

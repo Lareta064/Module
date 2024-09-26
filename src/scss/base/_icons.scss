@@ -15,6 +15,7 @@
 	width: 28px;
 	height: 28px;
 	color: #22231D;
+	transition: .3s; 
 }
 .svg-chevronRight, .svg-chevronLeft, .svg-book{
 	width: 8px;
@@ -30,9 +31,13 @@
 	width: 20px;
 	height: 20px;
 }
-.svg-inst, .svg-bar{
+.svg-inst, .svg-bar,.svg-cross{
 	width: 22px;
 	height: 22px;
 	color: white;
+	transition: .3s; 
+}
+.svg-inst:hover{
+	color: $ac2;
 }
 .svg-bar{color: #22231D;}

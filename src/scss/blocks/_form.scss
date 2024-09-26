@@ -32,18 +32,35 @@ select:-webkit-autofill:focus {
 .search-form{
   flex-grow: 1;
   input{
-    padding-right: 44px;
+    padding-right: 84px;
     border: 1px solid $sec1;
     color: $sec2;
+    &::-webkit-search-cancel-button {
+       display: none;
+      }
   }
-  .search-btn{
+  .svg-search{color: white;}
+    .input-clear-btn, .search-btn{
     position: absolute;
-    top: 1px;
-    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
     z-index: 2;
     height: 50px;
-    width: 44px;
+    width: 40px;
     cursor:pointer;
     border-radius: 12px;
+    &:hover .svg-search{color: $ac2;}
   }
+  .input-clear-btn{
+    right: 54px;
+    width: 34px;
+    display: none;
+    .svg-cross{width: 16px;
+    height: 16px;}
+    &:hover, &:focus{.svg-cross{color: $ac2;}}
+  }
+    input:not(:placeholder-shown)+.input-clear-btn {
+      display: block;
+    }
 }
