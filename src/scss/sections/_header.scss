@@ -61,33 +61,20 @@
 	top: 178px;
 	right: 0;
 	left: 0;
-	z-index: -1;
 	height: 300px;
-	visibility: hidden;
-	
-	// &:after{
-	// 	content:'';
-	// 	position: absolute;
-	// 	top: 0;
-	// 	bottom: 0;
-	// 	left: -165px;
-		
-	// 	width: 100vw;
-	// 	background-color: #f5f5f5;
-	// 	z-index: 1;
-	// }
+	// visibility: hidden;
+	// z-index: -1;
+
 }
 .catalogy-menu-content{
-	// position: relative;
-	// z-index: 2;
+	
 	width: min(1190px,100%);
 	padding-inline:20px;
 	margin-inline: auto;
 }
 
 .catalogy-menu-desktop.cat-menu-show{visibility: visible; z-index: 5;}
-
-/**/
+/*========*/
 .header-center-row{
 	column-gap:30px;
 	@media (max-width: 1199px) {
