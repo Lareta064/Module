@@ -1,10 +1,13 @@
 /*.catalogy-menu*/
-.cat-menu{
+.catalogy-menu-wrapper{
 	position: absolute;
 	top: 145px;
 	right: 0;
 	left: 0;
 	padding-top: 40px;
+	@media (max-width: 1199px) {
+	padding-top: 5px;
+	}
 }
 .catalogy-menu-desktop {
 	padding-block: 20px;
