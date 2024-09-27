@@ -76,6 +76,9 @@
 			visibility:visible;
 		}
 		.catalogy-menu-link:before{opacity: 1;}
+		.catalogy-menu-icon svg{
+			color: $ac2;
+		}
 	}
 
 	.catalogy-menu-icon{
