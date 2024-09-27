@@ -1,0 +1,101 @@
+/*.catalogy-menu*/
+.catalogy-menu-desktop {
+	padding-block: 20px;
+	position: absolute;
+	top: 178px;
+	right: 0;
+	left: 0;
+	min-height: 408px;
+	box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.08);
+	background-color: #fff;
+	// visibility: hidden;
+	// z-index: -1;
+
+}
+
+.catalogy-menu-content {
+
+	width: min(1190px, 100%);
+	padding-inline: 20px;
+	margin-inline: auto;
+}
+
+.catalogy-menu-desktop.cat-menu-show {
+	visibility: visible;
+	z-index: 5;
+}
+.catalogy-menu{
+	position: relative;
+	width: 380px;
+	.catalogy-menu-drop{
+		position: absolute;
+		background-color: #fff;
+		top: 0;
+		
+		left:100%;
+		margin-left: -5px;
+		
+		z-index: -2;
+		visibility: hidden;
+		width: 100%;
+		max-width: 380px;
+		
+		a{
+			display: block;
+			width: fit-content;
+			padding: 9px 20px 9px 25px;
+			font-weight: 500;
+			color: $pr;
+			transition: .3s; 
+			&:hover{
+				color: $ac2;
+			}
+		}
+	}
+	.catalogy-menu-item{
+		display: flex;
+		column-gap: 20px;
+		padding: 16px 20px;
+	}
+	.catalogy-menu-item:hover{
+		.catalogy-menu-drop{
+			z-index: 2;
+			visibility:visible;
+		}
+		.catalogy-menu-link:before{opacity: 1;}
+	}
+
+	.catalogy-menu-icon{
+		width: 22px;
+		height: 22px;
+		svg, img{
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			
+		}
+	}
+	.catalogy-menu-link{
+		flex-grow: 1;
+		position: relative;
+		font-weight: 600;
+		color: $pr;
+		&:before{
+			content: '';
+			display: block;
+			width: 6px;
+			height: 12px;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 2;
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='6' height='12' viewBox='0 0 6 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.350679 1.06492C0.149838 1.26576 0.149838 1.59139 0.350679 1.79223L4.55845 6.00001L0.350679 10.2078C0.149838 10.4086 0.149838 10.7342 0.350679 10.9351C0.551521 11.1359 0.877148 11.1359 1.07799 10.9351L5.64942 6.36366C5.85026 6.16282 5.85026 5.83719 5.64942 5.63635L1.07799 1.06492C0.877148 0.864081 0.551521 0.864081 0.350679 1.06492Z' fill='%23A4AB00' /%3e%3c/svg%3e");
+
+			background-size: 6px 12px;
+			opacity: 0;
+		}
+		
+	}
+}
+/*========*/
