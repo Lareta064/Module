@@ -27,11 +27,24 @@
 .catalogy-menu{
 	position: relative;
 	width: 380px;
+	padding-right: 20px;
+	&:before{
+		content:'';
+		display: block;
+		width: 1px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right:0;
+		background-color: $sec1;
+		z-index: 5;
+	}
 	.catalogy-menu-drop{
 		position: absolute;
 		background-color: #fff;
 		top: 0;
-		
+		padding-top: 8px;
+		padding-left: 20px;
 		left:100%;
 		margin-left: -5px;
 		
