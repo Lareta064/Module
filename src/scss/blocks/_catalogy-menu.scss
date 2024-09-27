@@ -1,18 +1,23 @@
 /*.catalogy-menu*/
-.catalogy-menu-desktop {
-	padding-block: 20px;
+.cat-menu{
 	position: absolute;
-	top: 178px;
+	top: 145px;
 	right: 0;
 	left: 0;
+	padding-top: 40px;
+}
+.catalogy-menu-desktop {
+	padding-block: 20px;
 	min-height: 465px;
 	box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.08);
 	background-color: #fff;
-	// visibility: hidden;
-	// z-index: -1;
+	display: none;
+	z-index: -1;
 
 }
-
+#cat-btn:hover .catalogy-menu-desktop{
+	display: block;
+}
 .catalogy-menu-content {
 	position: relative;
 	
@@ -22,7 +27,10 @@
 }
 
 .catalogy-menu-desktop.cat-menu-show {
-	visibility: visible;
+	display: block;
+	animation-name: opac;
+		animation-duration: 1s;
+		animation-fill-mode: forwards;
 	z-index: 5;
 }
 .catalogy-menu{
@@ -60,7 +68,7 @@
 			padding: 9px 20px 9px 25px;
 			font-weight: 500;
 			color: $pr;
-			transition: .3s; 
+			transition: color .3s; 
 			&:hover{
 				color: $ac2;
 			}

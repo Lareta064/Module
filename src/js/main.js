@@ -1,13 +1,14 @@
 document.addEventListener("DOMContentLoaded", function (){
-	const catBtn = document.getElementById('cat-btn');
-	const catMenu = document.getElementById('cat-menu');
+	// const catBtn = document.getElementById('cat-btn');
+	// const catMenu = document.getElementById('cat-menu');
 
-	catBtn.addEventListener('mouseenter', ()=>{
-		catMenu.classList.add('cat-menu-show');
-	});
-	catMenu.addEventListener('mouseleave', ()=>{
-		catMenu.classList.remove('cat-menu-show');
-	});
+	// catBtn.addEventListener('mouseenter', ()=>{
+	// 	catMenu.classList.add('cat-menu-show');
+	// });
+	// catMenu.addEventListener('mouseleave', ()=>{
+	// 	catMenu.classList.remove('cat-menu-show');
+	// 	console.log('mouseleave');
+	// });
 	
 	/* ==============показать модальные окна,  имеют атрибут frame-modal , кнопка, которая его показывает , имеет атрибут frame-btn, Чтобы закрыть такое окно, прописываем кнопке закрытия атрибут frame-close*/
 	const modalFramesOpen = document.querySelectorAll('[frame-btn]');
