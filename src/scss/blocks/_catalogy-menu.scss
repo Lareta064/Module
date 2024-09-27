@@ -5,7 +5,7 @@
 	top: 178px;
 	right: 0;
 	left: 0;
-	min-height: 408px;
+	min-height: 465px;
 	box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.08);
 	background-color: #fff;
 	// visibility: hidden;
@@ -14,7 +14,8 @@
 }
 
 .catalogy-menu-content {
-
+	position: relative;
+	
 	width: min(1190px, 100%);
 	padding-inline: 20px;
 	margin-inline: auto;
@@ -27,7 +28,6 @@
 .catalogy-menu{
 	position: relative;
 	width: 380px;
-	padding-right: 20px;
 	&:before{
 		content:'';
 		display: block;
@@ -37,11 +37,12 @@
 		bottom: 0;
 		right:0;
 		background-color: $sec1;
-		z-index: 5;
+		z-index: 1;
+		pointer-events: none;
 	}
 	.catalogy-menu-drop{
 		position: absolute;
-		background-color: #fff;
+		opacity: 0;
 		top: 0;
 		padding-top: 8px;
 		padding-left: 20px;
@@ -51,7 +52,7 @@
 		z-index: -2;
 		visibility: hidden;
 		width: 100%;
-		max-width: 380px;
+		max-width: 400px;
 		
 		a{
 			display: block;
@@ -68,12 +69,15 @@
 	.catalogy-menu-item{
 		display: flex;
 		column-gap: 20px;
-		padding: 16px 20px;
+		padding: 16px 40px 16px 20px;
 	}
 	.catalogy-menu-item:hover{
 		.catalogy-menu-drop{
 			z-index: 2;
 			visibility:visible;
+			animation-name: opac;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
 		}
 		.catalogy-menu-link:before{opacity: 1;}
 		.catalogy-menu-icon svg{
@@ -113,5 +117,30 @@
 		}
 		
 	}
+}
+.catalogy-menu-img{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	transform: translate(150%, 50%);
+	img{
+		width: 340px;
+		max-height: 417px;
+		object-fit: contain;	
+	}
+	@media (max-width: 1364px) {
+		transform: translate(130%, 50%);
+
+		img {
+			width: 300px;
+		}
+	}
+	@media (max-width: 1199px) {
+	    transform: translate(100%, 50%);
+		img {width: 240px;}
+	}
+}
+@keyframes opac{
+	to{opacity: 1;}
 }
 /*========*/

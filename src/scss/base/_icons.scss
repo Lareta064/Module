@@ -32,7 +32,7 @@
 	height: 20px;
 }
 .svg-inst, .svg-bar,.svg-cross,.svg-blocks,
-.svg-bruschatka, .svg-isolyacia, .svg-kamin, .svg-kirpich, .svg-krovlya, .svg-materials, .svg-teoisolyacia{
+.svg-bruschatka, .svg-isolyacia, .svg-kamin, .svg-kirpich, .svg-krovlya, .svg-materials, .svg-tepisolyacia{
 	width: 22px;
 	height: 22px;
 	color: white;
@@ -44,9 +44,12 @@
 .svg-kirpich,
 .svg-krovlya,
 .svg-materials,
-.svg-teoisolyacia{
+.svg-tepisolyacia{
 	color:#AEAC99;
 }
+ .svg-tepisolyacia{
+	fill: transparent;
+ }
 .svg-inst:hover{
 	color: $ac2;
 }
