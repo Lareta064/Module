@@ -16,13 +16,10 @@
 	}
 	@media (max-width: 1199px) {
 		padding-block: 15px;
-		.logo{width: 70px; height: 75px; margin-right: 0;}
+		.logo{width: 70px; height: 75px;}
 	}
 }
-.header-desk-content{
-	
-	.logo{margin-right: 10px;}
-}
+
 .header-right{
 	flex-shrink: 0;
 	.phone-link{
@@ -55,8 +52,13 @@
 }
 
 .header-center-row{
-	column-gap:30px;
+	column-gap:40px;
 	@media (max-width: 1199px) {
 		column-gap: 20px;
 	}
+}
+.header-wrapper{
+	display: flex;
+	column-gap: 30px;
+	flex-grow:1;
 }
