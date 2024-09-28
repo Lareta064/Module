@@ -14,7 +14,10 @@
 	  bottom: 0;
 	  background-color: rgba(255,255,255, .7);
 	  display: flex;
+	  transform: translateX(110%);
+	  transition: .3s; 
 	  justify-content: flex-end;
+	  &.active{transform: translateX(0);}
 		.header-block-content, .header-center, .nav-menu, .header-right{
 			display: flex;
 			flex-direction: column;

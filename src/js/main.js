@@ -1,14 +1,54 @@
 document.addEventListener("DOMContentLoaded", function (){
-	const catalogyBtn = document.getElementById('cat-btn');
-	const catalogyMenu = document.getElementById('cat-menu');
-	catalogyBtn.addEventListener('click', ()=>{
-		
-		if(catalogyMenu.classList.contains('active')){
-			catalogyMenu.classList.remove('active');
-		}else{
-			catalogyMenu.classList.add('active');
+	/*===============MOBILE MENU ==================*/
+	const menuToggle = document.querySelector('#menu-toggle');
+	const mobileMenu = document.querySelector('#menu');
+	const bodyEl = document.body;
+	if (menuToggle) {
+		function resetActiveMenu(){
+			mobileMenu.classList.remove('active');
+			menuToggle.classList.remove('active');
+			bodyEl.classList.remove('lock');
 		}
-	});
+		menuToggle.addEventListener('click', ()=> {
+			
+			if (menuToggle.classList.contains('active')) {
+				resetActiveMenu();
+			
+			} else {
+				menuToggle.classList.add('active');
+			    mobileMenu.classList.add('active');
+				bodyEl.classList.add('lock');
+			}
+		});
+		mobileMenu.addEventListener('click', (e)=>{
+				resetActiveMenu();
+		});
+		function checkScreenSize() {
+			if (window.innerWidth > 1023 ) {
+				bodyEl.classList.remove('lock');
+				resetActiveMenu();
+			}
+		}
+		// Проверка размера экрана при загрузке страницы
+		checkScreenSize();
+
+		// Проверка размера экрана при изменении размера окна
+		window.addEventListener('resize', checkScreenSize);
+	}
+	/*OPEN CATALOGY MENU*/
+	const catalogyBtns = document.getElementsByClassName('catalogy-button');
+	const catalogyMenu = document.getElementById('cat-menu');
+	
+	for(let btn of catalogyBtns){
+
+		btn.addEventListener('click', ()=>{
+			if(catalogyMenu.classList.contains('active')){
+				catalogyMenu.classList.remove('active');
+			}else{
+				catalogyMenu.classList.add('active');
+			}
+		});
+	}
 
 
 	/* ==============показать модальные окна,  имеют атрибут frame-modal , кнопка, которая его показывает , имеет атрибут frame-btn, Чтобы закрыть такое окно, прописываем кнопке закрытия атрибут frame-close*/

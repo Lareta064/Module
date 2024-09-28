@@ -22,6 +22,12 @@
 	.logo {
 			width: 60px;
 			height: 64px;
+			margin-right: auto;
+			
+		}
+
+		&-content{
+			align-items: center;
 		}
 	}
 }
