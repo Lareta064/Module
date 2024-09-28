@@ -1,16 +1,31 @@
-header.header.header-desk
+//==== DESKTOP HEADER ===
+header.header
+	include ../blocks/_cat-menu-desktop.pug
 	.container
-		.header-desk-content.gap-30
+		.header-content.gap-30
 			a(href="#!").logo
 				+svg('logo')
+			
+			//==== CATALOGY BUTTON FOR MOBILE ===
+			.catalogy-button.catalogy-button--mobile
+				button.catalogy-menu-btn.btn
+					+svg('bar')
+					span Каталог
+			//==== BURGER ICON FOR MOB MENU===
+			#menu-toggle.menu-toggle
+				span
+			//====HEADER BLOCK ====
+			.header-block#menu
+				.header-block-content
+					include ../blocks/_header-center.pug
+					.header-right
+						.flex-row.gap-30
+							button.btn Написать
+								+svg('email')
+							a(href="#!").social-link
+								+svg('inst')
+						a(href="#!").link-icon.phone-link
+							+svg('phone')
+							| +7 (918) 829-99-30
 
-			include ../blocks/_header-center.pug
-			.header-right
-				.flex-row.gap-30
-					button.btn Написать
-						+svg('email')
-					a(href="#!").social-link
-						+svg('inst')
-				a(href="#!").link-icon.phone-link
-					+svg('phone')
-					| +7 (918) 829-99-30
+
