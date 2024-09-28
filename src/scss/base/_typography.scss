@@ -45,13 +45,16 @@
 .reg-18 {
 	font-size: 18px;
 }
+.bold-14{
+	font-size: 14px;
+}
 .txt-accent, .accent-bold{
 	color: $ac2;
 }
 .txt-upper{text-transform: uppercase;}
-.txt-bold, .accent-bold{font-weight: 700;}
-.txt-semi{font-weight: 600;}
-.txt-medium {font-weight: 500;}
+.txt-bold, .accent-bold,.bold-14{font-weight: 700!important;}
+.txt-semi{font-weight: 600!important;}
+.txt-medium {font-weight: 500!important;}
 	
 /*LINKS*/
 .link, .link-icon{

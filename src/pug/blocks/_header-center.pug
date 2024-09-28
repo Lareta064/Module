@@ -28,10 +28,12 @@
 
 
 	.header-center-row
-		//===catalogy btn ===
-		button.catalogy-menu-btn.btn
-			+svg('bar')
-			span Каталог
+		#cat-btn
+			//===catalogy btn ===
+			button.catalogy-menu-btn.btn
+				+svg('bar')
+				span Каталог
+			include _cat-menu-desktop.pug
 		
 		form.search-form
 			.form-item
