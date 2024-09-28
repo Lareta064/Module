@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", function (){
 	/*===============MOBILE MENU ==================*/
 	const menuToggle = document.querySelector('#menu-toggle');
 	const mobileMenu = document.querySelector('#menu');
-	const catalogyBtns = document.getElementsByClassName('catalogy-button');
+	const catalogyBtnMobile = document.getElementById('cat-btn-mob');
+	const catalogyBtnDesktop = document.getElementById('cat-btn-desk');
 	const catalogyMenu = document.getElementById('cat-menu');
 	const catMenuCloseMobile = document.querySelector('#close-cat-menu');
 	const bodyEl = document.body;
@@ -42,22 +43,48 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 	/*OPEN CATALOGY MENU*/
 	if(catalogyMenu){
-
-		for(let btn of catalogyBtns){
 	
-			btn.addEventListener('click', ()=>{
-				if(catalogyMenu.classList.contains('active')){
-					catalogyMenu.classList.remove('active');
-				}else{
-					catalogyMenu.classList.add('active');
-					mobileMenu.classList.remove('active');
-				   menuToggle.classList.remove('active');
-				}
-			});
-		}
+		catalogyBtnMobile.addEventListener('click', ()=>{
+			if(catalogyMenu.classList.contains('active')){
+				catalogyMenu.classList.remove('active');
+			}else{
+				catalogyMenu.classList.add('active');
+				mobileMenu.classList.remove('active');
+				menuToggle.classList.remove('active');
+			}
+		});
+		
 		catMenuCloseMobile.addEventListener('click', ()=>{
 			catalogyMenu.classList.remove('active');
 			bodyEl.classList.remove('lock');
+		});
+		
+		// Добавим класс active на меню при ховере на кнопку
+		
+		catalogyBtnDesktop.addEventListener('mouseover', function() {
+		catalogyMenu.classList.add('active');
+		
+		});
+
+		// Удалим класс active, если мышка выходит за пределы кнопки, но не заходит в меню
+		catalogyBtnDesktop.addEventListener('mouseout', function(event) {
+		// Проверим, если мышь выходит из кнопки и не переходит в меню
+		if (!catalogyMenu.contains(event.relatedTarget)) {
+			catalogyMenu.classList.remove('active');
+		}
+		});
+
+		// Если мышь заходит в меню, оставляем активный класс
+		catalogyMenu.addEventListener('mouseover', function() {
+		catalogyMenu.classList.add('active');
+		});
+
+		// Удалим класс active, если мышь выходит за пределы меню
+		catalogyMenu.addEventListener('mouseout', function(event) {
+		// Проверим, если мышь выходит из меню и не заходит на кнопку
+		if (!catalogyBtnDesktop.contains(event.relatedTarget)) {
+			catalogyMenu.classList.remove('active');
+		}
 		});
 	}
 
