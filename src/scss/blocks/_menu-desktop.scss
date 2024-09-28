@@ -16,12 +16,13 @@
 	.nav-menu-drop{
 		position: absolute;
 		margin-top: -1px;
-		z-index: 2;
+		z-index: 6;
 		top: 100%;
 		left: -30px;
 		padding: 10px;
 		border-radius: 20px;
 		background-color: #fff;
+		box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.08);
 		display: none;
 		transform: translateY(10px);
 		transition: .3s; 
@@ -45,6 +46,7 @@
 
 		.svg-chevronDown {
 			color: white;
+			svg{vertical-align: middle;}
 		}
 
 		&:hover {

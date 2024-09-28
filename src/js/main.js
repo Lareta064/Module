@@ -1,99 +1,94 @@
 document.addEventListener("DOMContentLoaded", function (){
-	/* Локализация datepicker */
-	if($( ".datepicker" ).length > 0){
-		$.datepicker.regional['ru'] = {
-			closeText: 'Закрыть',
-			prevText: 'Предыдущий',
-			nextText: 'Следующий',
-			currentText: 'Сегодня',
-			monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-			monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
-			dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
-			dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
-			dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-			weekHeader: 'Не',
-			dateFormat: 'dd.mm.yy',
-			firstDay: 1,
-			isRTL: false,
-			showMonthAfterYear: false,
-			yearSuffix: ''
-		};
-		$.datepicker.setDefaults($.datepicker.regional['ru']);
-
-		$(function() {
-		$( ".datepicker" ).datepicker();
-		});
-	}
-	/* убрать пробел после последней цифры в инпуте проверки смс-кода */
-	if($('#confirmCode')){
-		$('#confirmCode').bind('input', function(){
-			console.log('123');
-			if($(this).val().length == 5){
-				console.log('456');
-				$(this).blur();
+	/*===============MOBILE MENU ==================*/
+	const menuToggle = document.querySelector('#menu-toggle');
+	const mobileMenu = document.querySelector('#menu');
+	const catalogyBtnMobile = document.getElementById('cat-btn-mob');
+	const catalogyBtnDesktop = document.getElementById('cat-btn-desk');
+	const catalogyMenu = document.getElementById('cat-menu');
+	const catMenuCloseMobile = document.querySelector('#close-cat-menu');
+	const bodyEl = document.body;
+	
+	if (menuToggle) {
+		function resetActiveMenu(){
+			mobileMenu.classList.remove('active');
+			menuToggle.classList.remove('active');
+			bodyEl.classList.remove('lock');
+		}
+		menuToggle.addEventListener('click', ()=> {
+			
+			if (menuToggle.classList.contains('active')) {
+				resetActiveMenu();
+			
+			} else {
+				menuToggle.classList.add('active');
+			    mobileMenu.classList.add('active');
+				bodyEl.classList.add('lock');
+				catalogyMenu.classList.remove('active');
 			}
 		});
-	}
-	const overlayBg = document.querySelector('#overlay');
-	const bodyEl = document.body;
-
-	/* по клику на карточку адреса показать окно modal-reestr p-119.html . вид как на 121 макете*/
-	const addressItems = document.querySelectorAll('[data-address]');
-	if(addressItems.length > 0){
-		for(let i = 0; i < addressItems.length; i++){
-			addressItems[i].addEventListener('click', (e)=>{
-				
-				e.preventDefault();
-				for(let j = 0; j < addressItems.length; j++){
-					
-					if(j == i){
-						if(addressItems[j].classList.contains('address-card--current')){
-							addressItems[j].classList.remove('address-card--current');
-							document.querySelector('#reestr-modal').classList.remove('visible');
-							bodyEl.classList.remove('noscroll');
-						}
-						else{
-							document.querySelector('#reestr-modal').classList.add('visible');
-							bodyEl.classList.add('noscroll');
-							addressItems[j].classList.add('address-card--current')	;		
-						}
-					}
-					else{
-						addressItems[j].classList.remove('address-card--current');	
-						bodyEl.classList.remove('noscroll');
-					}
-				}
-				
-			});
+		// mobileMenu.addEventListener('click', (e)=>{
+		// 		resetActiveMenu();
+		// });
+		function checkScreenSize() {
+			if (window.innerWidth > 1023 ) {
+				bodyEl.classList.remove('lock');
+				resetActiveMenu();
+			}
 		}
+		// Проверка размера экрана при загрузке страницы
+		checkScreenSize();
+
+		// Проверка размера экрана при изменении размера окна
+		window.addEventListener('resize', checkScreenSize);
 	}
-	/*карточка услуги, по клику сделать активной */
-	const serviceDisableCards = document.querySelectorAll('.service-card--disable');
-	if(serviceDisableCards.length > 0){
-		for(let item of serviceDisableCards){
-			item.addEventListener('click', function(e){
-				item.classList.remove('service-card--disable');
-			});
+	/*OPEN CATALOGY MENU*/
+	if(catalogyMenu){
+	
+		catalogyBtnMobile.addEventListener('click', ()=>{
+			if(catalogyMenu.classList.contains('active')){
+				catalogyMenu.classList.remove('active');
+			}else{
+				catalogyMenu.classList.add('active');
+				mobileMenu.classList.remove('active');
+				menuToggle.classList.remove('active');
+			}
+		});
+		
+		catMenuCloseMobile.addEventListener('click', ()=>{
+			catalogyMenu.classList.remove('active');
+			bodyEl.classList.remove('lock');
+		});
+		
+		// Добавим класс active на меню при ховере на кнопку
+		
+		catalogyBtnDesktop.addEventListener('mouseover', function() {
+		catalogyMenu.classList.add('active');
+		
+		});
+
+		// Удалим класс active, если мышка выходит за пределы кнопки, но не заходит в меню
+		catalogyBtnDesktop.addEventListener('mouseout', function(event) {
+		// Проверим, если мышь выходит из кнопки и не переходит в меню
+		if (!catalogyMenu.contains(event.relatedTarget)) {
+			catalogyMenu.classList.remove('active');
 		}
-	}
+		});
 
-	const serviceActiveCards = document.querySelectorAll('.service-card');
+		// Если мышь заходит в меню, оставляем активный класс
+		catalogyMenu.addEventListener('mouseover', function() {
+		catalogyMenu.classList.add('active');
+		});
 
-	if(serviceActiveCards.length > 0){
-		for(let item of serviceActiveCards){
-
-			item.addEventListener('dblclick', function(e){
-				console.log('123');
-				if(item.classList.contains('service-card--disable')){
-					item.classList.remove('service-card--disable');
-
-				}
-				document.querySelector('.service-modal').classList.add('visible');
-
-			});
+		// Удалим класс active, если мышь выходит за пределы меню
+		catalogyMenu.addEventListener('mouseout', function(event) {
+		// Проверим, если мышь выходит из меню и не заходит на кнопку
+		if (!catalogyBtnDesktop.contains(event.relatedTarget)) {
+			catalogyMenu.classList.remove('active');
 		}
-
+		});
 	}
+
+
 	/* ==============показать модальные окна,  имеют атрибут frame-modal , кнопка, которая его показывает , имеет атрибут frame-btn, Чтобы закрыть такое окно, прописываем кнопке закрытия атрибут frame-close*/
 	const modalFramesOpen = document.querySelectorAll('[frame-btn]');
 	const modalFrames = document.querySelectorAll('[frame-modal]');
@@ -133,46 +128,6 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		}
 	}
-	overlayBg.addEventListener('click', function(e){
-	for(let frame of modalFrames){
-		frame.classList.remove('visible');
-		}
-		bodyEl.classList.remove('noscroll');
-		this.classList.remove('active');
-	});
-
-
-	//========большой сладер документов =======//
-	let docSlider = new Swiper(".doc-slider", {
-       slidesPerView: 1,
-	   spaceBetween: 24,
-       pagination: {
-			el: ".doc-slider-pagination",
-			clickable: true,
-		},
-		navigation: {
-          nextEl: ".doc-slider-next",
-          prevEl: ".doc-slider-prev",
-        },
-		speed:800,
-		loop: true
-      });
-
-	//========slider в мод окне-12 =======//
-	let categorCardsSlider = new Swiper(".categody-cards__swiper", {
-       slidesPerView: 1.6,
-	   spaceBetween: 24,
-       pagination: {
-			el: ".categody-cards-pagination",
-			clickable: true,
-		},
-		navigation: {
-          nextEl: ".categody-cards-next",
-          prevEl: ".categody-cards-prev",
-        },
-		speed:800,
-		loop: true
-      });
-
+	
 
 });

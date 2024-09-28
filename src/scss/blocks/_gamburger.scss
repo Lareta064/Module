@@ -1,0 +1,78 @@
+/*========GAMBURGER======*/
+.menu-toggle {
+	display: none;
+	flex-shrink: 0;
+	width: 54px;
+	height: 54px;
+	border-radius: 5px;
+	background-color: #fff;
+	z-index: 6;
+	cursor: pointer;
+	justify-content: center;
+	align-items: center;
+
+}
+
+@media (max-width: 1023px) {
+	.menu-toggle {
+		display: flex;
+
+	}
+}
+
+.menu-toggle span {
+	position: relative;
+	height: 2px;
+	width: 25px;
+	border-radius: 3px;
+	background-color:#22231d;
+	-webkit-transition: .2s;
+	-o-transition: .2s;
+	transition: .2s;
+}
+
+.menu-toggle span:after,
+.menu-toggle span:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	height: 2px;
+	background-color: inherit;
+	border-radius: 5px;
+	right: 0;
+	-webkit-transition: .2s;
+	-o-transition: .2s;
+	transition: .2s;
+}
+
+.menu-toggle span:after {
+	top: -6px;
+}
+
+.menu-toggle span:before {
+	bottom: -6px;
+}
+
+
+.active.menu-toggle span {
+	background-color: transparent !important;
+}
+
+
+.active.menu-toggle span:after {
+	top: 0px;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	background-color: #22231d;
+	;
+}
+
+.active.menu-toggle span:before {
+	bottom: 0px;
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	background-color: #22231d;
+	;
+}

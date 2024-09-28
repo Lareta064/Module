@@ -1,4 +1,4 @@
-input:-webkit-autofill,
+
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
@@ -10,6 +10,12 @@ select:-webkit-autofill:focus {
   
   -webkit-box-shadow: 0 0 0px 1000px #fff inset;
    box-shadow: 0 0 0px 1000px #fff inset;
+}
+.header .search-form input:-webkit-autofill,.header .search-form input:-webkit-autofill:hover, .header .search-form input:-webkit-autofill:focus{
+  -webkit-box-shadow: 0 0 0px 1000px black inset;
+  box-shadow: 0 0 0px 1000px black inset;
+  color: white;
+  -webkit-text-fill-color: white;
 }
 .form-item{
   position: relative;
@@ -34,7 +40,7 @@ select:-webkit-autofill:focus {
   input{
     padding-right: 84px;
     border: 1px solid $sec1;
-    color: $sec2;
+    color: $sec2!important;
     &::-webkit-search-cancel-button {
        display: none;
       }

@@ -57,3 +57,17 @@
 		border-left: 1px solid #22231D;
 	}
 }
+
+.close-btn{
+	width: 22px;
+	height: 22px;
+	.svg-cross{
+		width: 18px;
+		height: 18px;
+		color: $pr;
+		
+	}
+	&:hover .svg-cross {
+		color: $ac2;
+	}
+}

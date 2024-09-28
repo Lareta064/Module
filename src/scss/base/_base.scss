@@ -106,15 +106,15 @@ input[type="submit"] {
 .d-grid{
 	display: grid;
 }
-.flex-row,.stat-item,.pagination,.tabs-btns,.nav-menu,.header-center-row,.flex-center{
+.flex-row,.stat-item,.pagination,.tabs-btns,.nav-menu,.header-center-row,.flex-center,.close-btn{
 	display: flex;
 	align-items: center;
 	column-gap: 10px;
 }
 .flex-center, .flex-center-x, .icon-txt,
-.header-desk-content,.header-center{display: flex; column-gap:10px;}
+.header-content,.header-center{display: flex; column-gap:10px;}
 
-.flex-center-x, .flex-center{
+.flex-center-x, .flex-center,.close-btn{
 	justify-content: center;
 }
 .flex-column,.header-center{
