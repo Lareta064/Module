@@ -10,7 +10,7 @@
 		display: none;
 	}
 }
-.catalogy-menu-desktop {
+.catalogy-menu-wrapper {
 	position: absolute;
 	top: 178px;
 	right: 0;
@@ -40,7 +40,7 @@
 	}
 }
 
-.catalogy-menu-desktop.active {
+.catalogy-menu-wrapper.active {
 	display: block;
 	animation-name: opac;
 		animation-duration: 1s;

@@ -2,7 +2,10 @@ document.addEventListener("DOMContentLoaded", function (){
 	/*===============MOBILE MENU ==================*/
 	const menuToggle = document.querySelector('#menu-toggle');
 	const mobileMenu = document.querySelector('#menu');
+	const catalogyBtns = document.getElementsByClassName('catalogy-button');
+	const catalogyMenu = document.getElementById('cat-menu');
 	const bodyEl = document.body;
+	
 	if (menuToggle) {
 		function resetActiveMenu(){
 			mobileMenu.classList.remove('active');
@@ -18,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				menuToggle.classList.add('active');
 			    mobileMenu.classList.add('active');
 				bodyEl.classList.add('lock');
+				catalogyMenu.classList.remove('active');
 			}
 		});
 		mobileMenu.addEventListener('click', (e)=>{
@@ -36,8 +40,6 @@ document.addEventListener("DOMContentLoaded", function (){
 		window.addEventListener('resize', checkScreenSize);
 	}
 	/*OPEN CATALOGY MENU*/
-	const catalogyBtns = document.getElementsByClassName('catalogy-button');
-	const catalogyMenu = document.getElementById('cat-menu');
 	
 	for(let btn of catalogyBtns){
 
@@ -46,6 +48,8 @@ document.addEventListener("DOMContentLoaded", function (){
 				catalogyMenu.classList.remove('active');
 			}else{
 				catalogyMenu.classList.add('active');
+				mobileMenu.classList.remove('active');
+			   menuToggle.classList.remove('active');
 			}
 		});
 	}
