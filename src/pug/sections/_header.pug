@@ -5,16 +5,17 @@ header.header.header-desk
 		.header-desk-content.gap-30
 			a(href="#!").logo
 				+svg('logo')
-			.header-wrapper
-				include ../blocks/_header-center.pug
-				.header-right
-					.flex-row.gap-30
-						button.btn Написать
-							+svg('email')
-						a(href="#!").social-link
-							+svg('inst')
-					a(href="#!").link-icon.phone-link
-						+svg('phone')
-						| +7 (918) 829-99-30
+			.header-block#burger-menu
+				.header-block-content
+					include ../blocks/_header-center.pug
+					.header-right
+						.flex-row.gap-30
+							button.btn Написать
+								+svg('email')
+							a(href="#!").social-link
+								+svg('inst')
+						a(href="#!").link-icon.phone-link
+							+svg('phone')
+							| +7 (918) 829-99-30
 
 
