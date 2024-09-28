@@ -1,6 +1,16 @@
 document.addEventListener("DOMContentLoaded", function (){
+	const catalogyBtn = document.getElementById('cat-btn');
+	const catalogyMenu = document.getElementById('cat-menu');
+	catalogyBtn.addEventListener('click', ()=>{
+		
+		if(catalogyMenu.classList.contains('active')){
+			catalogyMenu.classList.remove('active');
+		}else{
+			catalogyMenu.classList.add('active');
+		}
+	});
 
-	
+
 	/* ==============показать модальные окна,  имеют атрибут frame-modal , кнопка, которая его показывает , имеет атрибут frame-btn, Чтобы закрыть такое окно, прописываем кнопке закрытия атрибут frame-close*/
 	const modalFramesOpen = document.querySelectorAll('[frame-btn]');
 	const modalFrames = document.querySelectorAll('[frame-modal]');
