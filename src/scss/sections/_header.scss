@@ -1,7 +1,9 @@
 .header{
 	padding-block:30px;
 	background-color: $pr;
-	position: relative;
+	position:sticky;
+	top:0;
+	z-index: 3;
 	
 	.logo{
 		display: flex;
