@@ -29,7 +29,8 @@
 			max-width: 425px;
 			width: 100%;
 			padding-block: 14px 40px;
-			display: block;
+			flex-direction: column;
+			&>*{width: 100%;}
 		}
 	 
 	  .header-center{
@@ -85,6 +86,7 @@
 			row-gap:22px;
 			flex-shrink: 0;
 			flex-direction: column-reverse;
+			margin-top: auto;
 			.phone-link{height: auto; margin-top: 0;}
 		}
 	}

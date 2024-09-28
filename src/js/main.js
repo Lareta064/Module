@@ -26,9 +26,9 @@ document.addEventListener("DOMContentLoaded", function (){
 				catalogyMenu.classList.remove('active');
 			}
 		});
-		mobileMenu.addEventListener('click', (e)=>{
-				resetActiveMenu();
-		});
+		// mobileMenu.addEventListener('click', (e)=>{
+		// 		resetActiveMenu();
+		// });
 		function checkScreenSize() {
 			if (window.innerWidth > 1023 ) {
 				bodyEl.classList.remove('lock');

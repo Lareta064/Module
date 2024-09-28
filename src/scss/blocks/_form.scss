@@ -11,9 +11,11 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #fff inset;
    box-shadow: 0 0 0px 1000px #fff inset;
 }
-.header .search-form input:-webkit-autofill{
-  -webkit-box-shadow: 0 0 0px 1000px $pr inset;
-  box-shadow: 0 0 0px 1000px $pr inset;
+.header .search-form input:-webkit-autofill,.header .search-form input:-webkit-autofill:hover, .header .search-form input:-webkit-autofill:focus{
+  -webkit-box-shadow: 0 0 0px 1000px black inset;
+  box-shadow: 0 0 0px 1000px black inset;
+  color: white;
+  -webkit-text-fill-color: white;
 }
 .form-item{
   position: relative;
