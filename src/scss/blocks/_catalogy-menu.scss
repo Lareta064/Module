@@ -24,6 +24,9 @@
 	@media (max-width: 1199px) {
 		top: 150px;
 	}
+	@media (max-width: 1023px) {
+	   top: 92px;
+	}
 }
 
 .catalogy-menu-content {
@@ -32,6 +35,9 @@
 	width: min(1190px, 100%);
 	padding-inline: 20px;
 	margin-inline: auto;
+	@media (max-width: 1023px) {
+		padding-inline: 0;
+	}
 }
 
 .catalogy-menu-desktop.active {
@@ -55,6 +61,9 @@
 		background-color: $sec1;
 		z-index: 1;
 		pointer-events: none;
+		@media (max-width: 1023px) {
+		display: none;
+		}
 	}
 	.catalogy-menu-drop{
 		position: absolute;
@@ -82,6 +91,7 @@
 			}
 		}
 		@media (max-width: 1023px) {
+			
 			position: relative;
 			opacity: 1;
 			top: auto;
@@ -91,12 +101,22 @@
 			margin-left: 0;
 			z-index:1;
 			visibility: visible;
+			display: none;
+			a{width: 100%;}
+			
 		}
 	}
 	.catalogy-menu-item{
-		display: flex;
-		column-gap: 20px;
+		
 		padding: 16px 40px 16px 20px;
+		.flex-row{
+			column-gap: 20px;
+			
+		}
+		@media (max-width: 1023px) {
+			padding-right: 20px;
+		}
+		
 	}
 	.catalogy-menu-item:hover{
 		.catalogy-menu-drop{
@@ -108,11 +128,23 @@
 			@media (max-width: 1023px) {
 				display: block;
 				animation: none;
+				border-top: 1px solid $sec2;
+				border-bottom: 1px solid $sec2;
+				margin-top:14px;
 			}
 		}
-		.catalogy-menu-link:before{opacity: 1;}
+		.catalogy-menu-link:before{
+			opacity: 1;
+			
+			@media (max-width: 1023px) {
+					top:40%;
+					transform: translateY(-50%) rotate(-90deg)  ;
+				}
+			
+		}
 		.catalogy-menu-icon svg{
 			color: $ac2;
+			
 		}
 	}
 
@@ -147,6 +179,9 @@
 			opacity: 0;
 		}
 		
+	}
+	@media (max-width: 1023px) {
+	   width: 100%;
 	}
 }
 .catalogy-menu-img{
