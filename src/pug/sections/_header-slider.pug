@@ -2,7 +2,7 @@
 	.container
 		.banner-caption
 			h1.h1 Строительство 
-				span дома начинаетя
+				span дома <br>начинается
 				| с нас
 	
 	.banner-tabs
@@ -65,13 +65,14 @@
 								a(href="#!").btn-dark Ознакомиться с продукцией
 									+svg-ui('chevronRight')
 				
-				
+				//=== tabs-control ===
 				.tabs-control
-					
 					.tabs-control--arrows
-						
 						button.btn-prev
 							+svg-ui('chevronLeft')
 						
 						button.btn-next
 							+svg-ui('chevronRight')
+					.tabs-control--timer
+						.timer-band
+					

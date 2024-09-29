@@ -138,10 +138,10 @@ document.addEventListener("DOMContentLoaded", function (){
         fadeEffect: {
             crossFade: true
         },
-        // autoplay: {
-        //     delay: 4700,
-        //     disableOnInteraction: false,
-        // },
+        autoplay: {
+            delay: 14700,
+            disableOnInteraction: false,
+        },
         navigation: {
             nextEl: '.btn-next',
             prevEl: '.btn-prev',
@@ -156,13 +156,13 @@ document.addEventListener("DOMContentLoaded", function (){
                 return '<li class="' + className + '">' + (bannerTabsTitle[index]) + '</li>';
             },
         },
-        // on: {
-        //     slideChange: () => {
-        //         $('.timer-band').removeClass('active');
-        //         setTimeout(() => {
-        //             $('.timer-band').addClass('active');
-        //         }, 50);
-        //     },
-        // },
+        on: {
+            slideChange: () => {
+                $('.timer-band').removeClass('active');
+                setTimeout(() => {
+                    $('.timer-band').addClass('active');
+                }, 50);
+            },
+        },
     });
 });
