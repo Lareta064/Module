@@ -124,7 +124,7 @@ input[type="submit"] {
 .d-grid{
 	display: grid;
 }
-.flex-row,.pagination,.stat-item,.tabs-btns,.nav-menu,.header-center-row,.flex-center,.close-btn{
+.flex-row,.pagination,.stat-item,.tabs-btns,.nav-menu,.header-center-row,.flex-center,.close-btn,.slider-arrows,.slider-controls{
 	display: flex;
 	align-items: center;
 	column-gap: 10px;
@@ -142,5 +142,14 @@ input[type="submit"] {
 	column-gap:30px;
 	@media (max-width: 1199px) {
 		column-gap: 20px;
+	}
+}
+.pt-120{
+	padding-top: 120px;
+	@media (max-width: 1199px) {
+		padding-top: 80px;
+	}
+	@media (max-width: 767px) {
+		padding-top: 60px;
 	}
 }

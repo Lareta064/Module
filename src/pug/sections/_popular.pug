@@ -1,0 +1,32 @@
+//===slider popular===
+section.popular.pt-120
+	.container
+		.popular-content
+			.popular-title
+				.h2 Популярное
+				p Представляем вашему вниманию наиболее популярные товары среди наших постоянных покупателей
+				.slider-controls
+					.slider-arrows
+						button.btn-prev.popular-slider-next
+							+svg('chevronLeft')
+						
+						button.btn-next.popular-slider-prev
+							+svg('chevronRight')
+
+					.popular-pagination.slider-pagination
+					
+
+			.popular-slider.swiper.flex-slider
+				.swiper-wrapper
+					.swiper-slide
+						+prod-card(1, 'Кирпич, Солома 1 НФ', 'Старый Оскол', 44)
+					.swiper-slide
+						+prod-card(2, 'Многослойная черепица Технониколь', 'SHINGLAS', 1900)
+					.swiper-slide
+						+prod-card(3, 'Кирпич кладка гладкий, 250*85*65 мм', 'БРАЕР', 44)
+					.swiper-slide
+						+prod-card(1, 'Кирпич, Солома 1 НФ', 'Старый Оскол', 44)
+					.swiper-slide
+						+prod-card(2, 'Кирпич, Солома 1 НФ', 'Старый Оскол', 44)
+					.swiper-slide
+						+prod-card(3, 'Кирпич, Солома 1 НФ', 'Старый Оскол', 44)

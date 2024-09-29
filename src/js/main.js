@@ -144,8 +144,8 @@ document.addEventListener("DOMContentLoaded", function (){
             disableOnInteraction: false,
         },
         navigation: {
-            nextEl: '.btn-next',
-            prevEl: '.btn-prev',
+            nextEl: '.banner-slider-next',
+            prevEl: '.banner-slider-prev',
         },
         pagination: {
             el: ".tabs-pagination",
@@ -166,4 +166,56 @@ document.addEventListener("DOMContentLoaded", function (){
             },
         },
     });
+
+
+	new Swiper('.popular-slider', {
+		slidesPerView: 1,
+		spaceBetween: 20,
+		pagination: {
+        	el: ".popular-pagination",
+			clickable: true,
+      	},
+		 navigation: {
+            nextEl: '.popular-slider-next',
+            prevEl: '.popular-slider-prev',
+        },
+		autoplay: {
+        	delay: 4500,
+        	disableOnInteraction: false,
+     	 },
+		 breakpoints: {
+			424: {
+			slidesPerView: 1.2,
+			spaceBetween: 20,
+			},
+			574: {
+			slidesPerView: 1.5,
+			spaceBetween: 20,
+			},
+			640:{
+				slidesPerView: 2,
+			},
+			768: {
+			slidesPerView: 2.5,
+			spaceBetween: 20,
+			},
+			992: {
+			slidesPerView: 3,
+			spaceBetween: 20,
+			},
+			1200: {
+			slidesPerView: 2.5,
+			spaceBetween: 20,
+			},
+			1365: {
+			slidesPerView: 2.8,
+			spaceBetween: 20,
+			},
+			1440:{
+				slidesPerView: 3,
+				spaceBetween: 20,
+			}
+		},
+		
+	});
 });

@@ -267,9 +267,21 @@
 	animation: timerBand 15000ms linear infinite;
 }
 
-.banner-tabs .tabs-control--arrows {
-	display: flex;
-	align-items: center;
-	column-gap:10px;
+
+.slider-pagination{
 	
+	.swiper-pagination-bullet{
+		width: 10px;
+		height: 10px;
+		background-color: $pr;
+		transition: .3s;
+		border-radius: 5px;
+		transition: .3s; 
+	}
+	.swiper-pagination-bullet.swiper-pagination-bullet-active {
+		width: 50px;
+		background-color: $ac2;
+
+	}
 }
+.flex-slider .swiper-slide{display: flex; height: unset;}
