@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		}
 	}
-	let bannerTabsTitle = ['Кирпич', 'Кровля', 'Шифер'];
+	let bannerTabsTitle = ['Кирпич','Утепление', 'Тротуарная плитка', 'Все для камина', 'Кровля'];
 
     new Swiper('#bannerTabsContent', {
         allowTouchMove: false,
@@ -143,8 +143,8 @@ document.addEventListener("DOMContentLoaded", function (){
         //     disableOnInteraction: false,
         // },
         navigation: {
-            nextEl: '.arr-next',
-            prevEl: '.arr-prev',
+            nextEl: '.btn-next',
+            prevEl: '.btn-prev',
         },
         pagination: {
             el: ".tabs-pagination",
