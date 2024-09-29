@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				catalogyMenu.classList.add('active');
 				mobileMenu.classList.remove('active');
 				menuToggle.classList.remove('active');
+				bodyEl.classList.add('lock');
 			}
 		});
 		
