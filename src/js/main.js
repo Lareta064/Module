@@ -26,9 +26,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				catalogyMenu.classList.remove('active');
 			}
 		});
-		// mobileMenu.addEventListener('click', (e)=>{
-		// 		resetActiveMenu();
-		// });
+		
 		function checkScreenSize() {
 			if (window.innerWidth > 1023 ) {
 				bodyEl.classList.remove('lock');
@@ -128,6 +126,43 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		}
 	}
-	
+	let bannerTabsTitle = ['Кирпич', 'Кровля', 'Шифер'];
 
+    new Swiper('#bannerTabsContent', {
+        allowTouchMove: false,
+        effect: "fade",
+        loop: true,
+        mousewheel: {
+            forceToAxis: true,
+        },
+        fadeEffect: {
+            crossFade: true
+        },
+        // autoplay: {
+        //     delay: 4700,
+        //     disableOnInteraction: false,
+        // },
+        navigation: {
+            nextEl: '.arr-next',
+            prevEl: '.arr-prev',
+        },
+        pagination: {
+            el: ".tabs-pagination",
+            modifierClass: 'tabs-pagination-bullets',
+            bulletClass: 'tabs-pagination-bullet',
+            bulletActiveClass: 'active',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<li class="' + className + '">' + (bannerTabsTitle[index]) + '</li>';
+            },
+        },
+        // on: {
+        //     slideChange: () => {
+        //         $('.timer-band').removeClass('active');
+        //         setTimeout(() => {
+        //             $('.timer-band').addClass('active');
+        //         }, 50);
+        //     },
+        // },
+    });
 });
