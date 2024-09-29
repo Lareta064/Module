@@ -22,6 +22,14 @@
 	color: $pr;
 	&[disabled]{opacity: 0.4; pointer-events: none; cursor: default;}
 }
+main {
+	.btn, .btn-dark{
+		@media (max-width: 767px) {
+			width: 100%;
+			max-width: 300px;
+		}
+	}	
+}
 .btn:hover{
 	background-color: $ac2;
 }
@@ -33,6 +41,12 @@
 	svg{color: white;}
 	&:hover{
 		background-color: $ac4;
+	}
+}
+.btn--slim{
+	@media (max-width: 767px) {
+	font-size: 14px;
+	height: 46px;
 	}
 }
 .btn-next, .btn-prev{

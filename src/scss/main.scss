@@ -1,22 +1,29 @@
 @import "base/_var";
+/*BASE STYLES*/
 @import "base/_base";
+/*BUTTONS*/
 @import "blocks/_buttons";
+/*typography*/
 @import "base/_typography.scss";
+/*svg sprite icons*/
 @import "base/_icons.scss";
+/*FORM*/
 @import "blocks/_form.scss";
+/*pagination*/
 @import "blocks/_pagination.scss";
-@import "blocks/_tabs.scss";
-@import "blocks/_statistick-block.scss";
+
 @import "blocks/_product-card.scss";
 @import "blocks/_brand-card.scss";
+/*HEADER MENU*/
 @import "blocks/_menu-desktop.scss";
 @import "blocks/_menu-mobile.scss";
 @import "blocks/_gamburger.scss";
 
 @import "sections/_header.scss";
+@import "blocks/_catalogy-menu.scss";
 @import "sections/_header-slider.scss";
 @import "sections/_banner-picture.scss";
-@import "blocks/_catalogy-menu.scss";
+@import "blocks/_statistick-block.scss";
 
 
 
