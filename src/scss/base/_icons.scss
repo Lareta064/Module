@@ -37,12 +37,17 @@
 	color: $pr1;
 }
 .svg-inst, .svg-bar,.svg-cross,.svg-blocks,
-.svg-bruschatka, .svg-isolyacia, .svg-kamin, .svg-kirpich, .svg-krovlya, .svg-materials, .svg-tepisolyacia{
+.svg-bruschatka, .svg-isolyacia, .svg-kamin, .svg-kirpich, .svg-krovlya, .svg-materials, .svg-tepisolyacia,.svg-whatsapp, .svg-telegram{
 	width: 22px;
 	height: 22px;
 	color: white;
 	transition: .3s; 
 }
+.svg-whatsapp,
+.svg-telegram{
+	color: #6D6C5E;
+}
+.svg-telegram{width: 27px;}
 .svg-blocks, .svg-bruschatka,
 .svg-isolyacia,
 .svg-kamin,

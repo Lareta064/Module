@@ -93,9 +93,26 @@
 }
 .icon-link, .icon-link:hover{
 	text-decoration: none;
+	svg {flex-shrink: 0;}
 }
 .icon-txt{
 	column-gap:6px;
+	svg{flex-shrink: 0;}
 	a{color: $pr;transition: .3s;  &:hover{color: $ac2;}}
 	
+}
+.social-block{
+	@media (max-width: 767px) {
+	 flex-direction: column;
+	 row-gap: 10px;
+	 align-items: flex-start;
+	.bold-20{font-size: 16px;}
+	}
+}
+.social-block, .social-links{column-gap:20px;}
+.social-links svg{
+	color: #6D6C5E;
+}
+.social-item:hover{
+	svg{color: $ac2;}
 }
