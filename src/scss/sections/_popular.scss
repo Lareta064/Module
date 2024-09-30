@@ -3,7 +3,7 @@
 	position: relative;
 	display: flex;
 	column-gap: 30px;
-	padding-bottom: 64px;
+	
 	.popular-title{ 
 		width: 335px;
 		flex-shrink: 0;
@@ -23,6 +23,7 @@
 	}
 	@media (max-width: 1199px) {
 	 display: block;
+	 padding-bottom: 64px;
 		.popular-title{
 			width: 100%;
 			background-color: transparent;

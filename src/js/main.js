@@ -131,6 +131,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
     new Swiper('#bannerTabsContent', {
         allowTouchMove: false,
+		speed: 800,
         effect: "fade",
         loop: true,
         mousewheel: {
@@ -171,11 +172,12 @@ document.addEventListener("DOMContentLoaded", function (){
 	new Swiper('.popular-slider', {
 		slidesPerView: 1,
 		spaceBetween: 20,
+		speed: 1000,
 		pagination: {
         	el: ".popular-pagination",
 			clickable: true,
       	},
-		 navigation: {
+		navigation: {
             nextEl: '.popular-slider-next',
             prevEl: '.popular-slider-prev',
         },
@@ -218,4 +220,14 @@ document.addEventListener("DOMContentLoaded", function (){
 		},
 		
 	});
+
+	new Swiper('.novelty-slider',{
+		slidesPerView: 2,
+		spaceBetween: 20,
+		speed: 1000,
+		navigation: {
+            nextEl: '.novelty-slider-next',
+            prevEl: '.novelty-slider-prev',
+        },
+	})
 });

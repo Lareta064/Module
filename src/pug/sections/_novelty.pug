@@ -1,0 +1,25 @@
+//=== НОВИНКИ ===
+section.novelty.pt-120
+	.container
+		.section-title
+			h2.h2 Новинки
+		//=== slider ===
+		.section-swiper
+			.novelty-slider.swiper
+				.swiper-wrapper
+					.swiper-slide
+						img.lazy(src="./img/banner1.webp", srcset="./img/banner1@2x.webp 2x" width="690" height="235" alt="alt")
+					.swiper-slide
+						img.lazy(src="./img/banner2.webp", srcset="./img/banner2@2x.webp 2x" width="690" height="235" alt="alt")
+					.swiper-slide
+						img.lazy(src="./img/banner1.webp", srcset="./img/banner1@2x.webp 2x" width="690" height="235" alt="alt")
+					.swiper-slide
+						img.lazy(src="./img/banner2.webp", srcset="./img/banner2@2x.webp 2x" width="690" height="235" alt="alt")
+				
+			//===slider nav arrows ===
+			.slider-arrows
+				button.btn-prev.novelty-slider-next
+					+svg('chevronLeft')
+				
+				button.btn-next.novelty-slider-prev
+					+svg('chevronRight')
