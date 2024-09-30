@@ -1,0 +1,31 @@
+section.clients.pt-120
+	.container
+		.section-title
+			h2.h2 Наши клиенты
+		.section-swiper
+			.clients-slider.swiper
+				.swiper-wrapper
+					.swiper-slide
+						+client-card(1)
+					.swiper-slide
+						+client-card(2)
+					.swiper-slide
+						+client-card(3)
+					.swiper-slide
+						+client-card(4)
+					.swiper-slide
+						+client-card(5)
+					.swiper-slide
+						+client-card(6)
+					.swiper-slide
+						+client-card(1)
+					.swiper-slide
+						+client-card(2)
+			
+			//===slider nav arrows ===
+			.slider-arrows
+				button.btn-prev.clients-slider-prev
+					+svg('chevronLeft')
+				
+				button.btn-next.clients-slider-next
+					+svg('chevronRight')

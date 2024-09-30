@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function (){
 
 	new Swiper('.novelty-slider',{
 		slidesPerView: 1,
-		spaceBetween: 20,
+		spaceBetween: 10,
 		speed: 1000,
 		navigation: {
             nextEl: '.novelty-slider-next',
@@ -245,6 +245,25 @@ document.addEventListener("DOMContentLoaded", function (){
 			1280:{
 				slidesPerView: 2,
 			    spaceBetween: 20,
+			}
+		}
+	});
+
+	new Swiper('.clients-slider',{
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+		speed: 1000,
+		navigation: {
+            nextEl: '.clients-slider-next',
+            prevEl: '.clients-slider-prev',
+        },
+		breakpoints: {
+			600:{
+				spaceBetween: 20,
+			},
+			1365:{
+				slidesPerView: 6,
+			    
 			}
 		}
 	});
