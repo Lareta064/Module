@@ -1,6 +1,6 @@
 .btn,
 .btn-next,
-.btn-prev, .btn-dark{
+.btn-prev, .btn-dark, .btn-outline, .btn-light{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -10,7 +10,7 @@
 		flex-shrink: 0;
 	}
 }
-.btn, .btn-dark{
+.btn, .btn-dark,.btn-outline, .btn-light{
 	width: fit-content;
 	column-gap:10px;
 	height: 54px;
@@ -23,12 +23,26 @@
 	&[disabled]{opacity: 0.4; pointer-events: none; cursor: default;}
 }
 main {
-	.btn, .btn-dark{
+	.btn, .btn-dark, .btn-outline{
 		@media (max-width: 767px) {
 			width: 100%;
 			max-width: 300px;
 		}
 	}	
+}
+.btn-outline,.btn-light{
+	height: 46px;
+	border: 1px solid $pr1;color: $pr1;
+	background-color: $sec2;
+	color: $pr1;
+	svg{color: $pr1;}
+	&:hover{
+		background-color: $ac1;
+	}
+}
+.btn-light{
+	background-color: #fff;
+	&:hover{background-color: $sec2;}
 }
 .btn:hover{
 	background-color: $ac2;

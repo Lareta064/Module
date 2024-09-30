@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function (){
         },
 		autoplay: {
         	delay: 4500,
-        	disableOnInteraction: false,
+        	disableOnInteraction: true,
      	 },
 		 breakpoints: {
 			424: {
@@ -222,12 +222,30 @@ document.addEventListener("DOMContentLoaded", function (){
 	});
 
 	new Swiper('.novelty-slider',{
-		slidesPerView: 2,
+		slidesPerView: 1,
 		spaceBetween: 20,
 		speed: 1000,
 		navigation: {
             nextEl: '.novelty-slider-next',
             prevEl: '.novelty-slider-prev',
         },
-	})
+		breakpoints: {
+			768: {
+			slidesPerView: 1.2,
+			spaceBetween: 20,
+			},
+			992: {
+			slidesPerView: 1.5,
+			spaceBetween: 20,
+			},
+			1199:{
+				slidesPerView: 1.8,
+			    spaceBetween: 20,
+			},
+			1280:{
+				slidesPerView: 2,
+			    spaceBetween: 20,
+			}
+		}
+	});
 });
