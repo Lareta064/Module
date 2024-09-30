@@ -76,7 +76,7 @@
 .txt-medium {font-weight: 500!important;}
 	
 /*LINKS*/
-.link, .link-icon{
+.link, .icon-link{
 	display: inline-flex;
 	align-items: center;
 	text-decoration: underline;
@@ -91,10 +91,11 @@
 		svg{color: $ac2; }
 	}
 }
-.link-icon, .link-icon:hover{
+.icon-link, .icon-link:hover{
 	text-decoration: none;
 }
 .icon-txt{
 	column-gap:6px;
+	a{color: $pr;transition: .3s;  &:hover{color: $ac2;}}
 	
 }

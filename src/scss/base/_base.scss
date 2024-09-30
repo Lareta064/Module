@@ -124,13 +124,13 @@ input[type="submit"] {
 .d-grid{
 	display: grid;
 }
-.flex-row,.pagination,.stat-item,.tabs-btns,.nav-menu,.header-center-row,.flex-center,.close-btn,.slider-arrows,.slider-controls,.centered-wrapper{
+.flex-row,.pagination,.stat-item,.tabs-btns,.nav-menu,.header-center-row,.flex-center,.close-btn,.slider-arrows,.slider-controls,.centered-wrapper, .icon-txt{
 	display: flex;
 	align-items: center;
 	column-gap: 10px;
 }
 .slider-arrows{z-index: 2;}
-.flex-center, .flex-center-x, .icon-txt,
+.flex-center, .flex-center-x,
 .header-content,.header-center{display: flex; column-gap:10px;}
 
 .flex-center-x, .flex-center,.close-btn,.centered-wrapper{
