@@ -144,10 +144,12 @@ document.addEventListener("DOMContentLoaded", function (){
 				selectMoreBtn.addEventListener('click', ()=>{
 					if(select.classList.contains('open--full')){
 						select.classList.remove('open--full');
+						select.classList.remove('open');
+
 						selectMoreBtn.innerHTML='Показать еще';
 					}else{
 						select.classList.add('open--full');
-						selectMoreBtn.innerHTML ='Свернуть';
+						selectMoreBtn.innerHTML ='Свернуть все';
 					}
 				});
 			}

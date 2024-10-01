@@ -82,8 +82,8 @@ select:-webkit-autofill:focus {
     cursor: pointer;
    &:after{
      content: '';
-      width: 16px;
-      height: 16px;
+      width: 22px;
+      height: 22px;
       display: block;
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='9' viewBox='0 0 14 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.213953 8.14303C0.49011 8.41919 0.937848 8.41919 1.214 8.14303L6.99969 2.35734L12.7854 8.14303C13.0615 8.41919 13.5093 8.41919 13.7854 8.14303C14.0616 7.86687 14.0616 7.41914 13.7854 7.14298L7.49972 0.857264C7.22356 0.581107 6.77582 0.581107 6.49967 0.857264L0.213953 7.14298C-0.0622032 7.41914 -0.0622032 7.86687 0.213953 8.14303Z' fill='%2322231D' /%3e%3c/svg%3e");
       background-size: 14px 9px;
@@ -91,9 +91,9 @@ select:-webkit-autofill:focus {
       background-repeat: no-repeat;
       position: absolute;
       right: 0;
-      top:50%;
+      top:52%;
       transition: .3s;
-     transform: translateY(-50%) rotate(180deg);
+      transform: translateY(-50%) rotate(180deg);
     }
   }
   &-content{
