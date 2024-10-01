@@ -24,7 +24,10 @@
 .section-title{
 	margin-bottom: 40px;
 	&>*{margin-bottom: 0!important;}
-	&.flex-row{align-items: baseline; column-gap:20px; flex-wrap: wrap;}
+	&.inline-row{
+		&>*{display: inline;}
+		&>*+*{margin-left: 10px;}
+	}
 	@media (max-width: 1023px) {margin-bottom: 20px;}
 }
 .h3 {

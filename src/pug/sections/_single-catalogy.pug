@@ -1,7 +1,7 @@
 section.single-catalogy
 	.container
 		+brcr('Главная', 'Каталог','Кирпич')
-		.section-title.flex-row
+		.section-title.inline-row
 			h2.h2 Кирпич
 			p.bold-gray 870 товаров
 		.aside-grid
@@ -50,3 +50,25 @@ section.single-catalogy
 								a(href="#!").catalogy-menu-link Все для камина
 			.aside-grid__main
 				.three-columns-grid
+					//==== single card===
+					a(href="#!").product-link
+						.product-link__img
+							img(src="./img/single-cat1.webp", srcset="./img/single-cat1@2x.webp 2x" width="335", height="282" alt="alt")
+						p.bold-20 Клинкерный
+
+					//==== single card===
+					a(href="#!").product-link
+						.product-link__img
+							img(src="./img/single-cat2.webp", srcset="./img/single-cat2@2x.webp 2x" width="335", height="282" alt="alt")
+						p.bold-20 Керамический
+					//==== single card===
+					a(href="#!").product-link
+						.product-link__img
+							img(src="./img/single-cat3.webp", srcset="./img/single-cat3@2x.webp 2x" width="335", height="282" alt="alt")
+						p.bold-20 Ручная формовка
+					//==== single card===
+					a(href="#!").product-link
+						.product-link__img
+							img(src="./img/single-cat4.webp", srcset="./img/single-cat4@2x.webp 2x" width="335", height="282" alt="alt")
+						p.bold-20 Забутовочный
+					
