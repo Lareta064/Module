@@ -28,6 +28,7 @@ body {
 	}
 }
 main{
+	padding-top: 60px;
 	padding-bottom: 120px;
 	@media (max-width: 1199px) {
 		padding-bottom: 100px;
@@ -36,12 +37,29 @@ main{
 		padding-bottom: 60px;
 	}
 }
+main.main{padding-top: 0;}
+.main>*+*, .inner-main>*+*{
+	padding-top: 120px;
+	@media (max-width: 1199px) {
+	 padding-top: 100px;
+	 padding-bottom: 100px;
+	}
+	@media (max-width: 767px) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+.inner-main h2, .inner-main .h2{margin-bottom: 40px; 
+	@media (max-width: 767px) {
+    margin-bottom: 20px;
+}}
 .page-wrapper{
 	display: flex;
 	flex-direction: column;
 	header, main, footer{width: 100%;}
 	header, footer{flex-shrink:0;}
 	main{flex-grow: 1;}
+	min-height: 100vh;
 }
 .inner-main{
 	padding-top: 60px;
