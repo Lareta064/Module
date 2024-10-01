@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	new Swiper('.novelty-slider',{
 		slidesPerView: 1,
 		spaceBetween: 10,
-		speed: 1000,
+		speed: 600,
 		navigation: {
             nextEl: '.novelty-slider-next',
             prevEl: '.novelty-slider-prev',
@@ -252,7 +252,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	new Swiper('.clients-slider',{
 		slidesPerView: 'auto',
 		spaceBetween: 10,
-		speed: 1000,
+		speed: 600,
 		navigation: {
             nextEl: '.clients-slider-next',
             prevEl: '.clients-slider-prev',

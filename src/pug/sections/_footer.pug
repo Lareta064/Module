@@ -25,3 +25,40 @@ footer.footer
 				a(href="#!").nav-menu-link Вопрос-ответ
 			li.nav-menu-item
 				a(href="#!").nav-menu-link Контакты
+
+		//==== contacts ===
+		.contacts-row
+			.contacts-row-block
+				p.bold-20 Контакты
+				.contacts-block
+					p.icon-txt
+						+svg('pin')
+						span 362013, Респ. Северная Осетия — Алания, г. Владикавказ, Черменское ш., 2
+					p.icon-txt.phone-group
+						+svg('phone')
+						span.phone-numbers
+							a(href="#!") +7 (918) 829-99-30,
+							a(href="#!") +7 (8672) 51-97-70,
+							a(href="#!") +7 (8672) 76-23-05
+					a(href="#!").icon-link
+						+svg('email')
+						span info@module.ru
+					p.icon-txt
+						+svg('clock')
+						span Время работы: 9.00 - 18.00 /  Выходной: воскресенье
+			
+			.contacts-row-social
+				.social-block
+					p.bold-20 Мы в социальных сетях:
+					
+					.social-links
+						a(href="#!").social-item
+							+svg('inst')
+						
+				//=== email===
+				button.btn Написать
+					+svg('email')
+		
+		.footer-copyright
+			p © 2024 | ООО "МОДУЛЬ"
+			a(href="#!").link.politic-link Политика обработки персональных данных
