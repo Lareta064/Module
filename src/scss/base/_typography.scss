@@ -23,6 +23,11 @@
 }
 .section-title{
 	margin-bottom: 40px;
+	&>*{margin-bottom: 0!important;}
+	&.inline-row{
+		&>*{display: inline;}
+		&>*+*{margin-left: 10px;}
+	}
 	@media (max-width: 1023px) {margin-bottom: 20px;}
 }
 .h3 {
@@ -68,10 +73,10 @@
 	color: $ac2;
 }
 .txt-upper{text-transform: uppercase;}
-.txt-bold, .accent-bold,.bold-14{font-weight: 700!important;}
+.bold-gray, .txt-bold, .accent-bold,.bold-14{font-weight: 700!important;}
 .txt-semi{font-weight: 600!important;}
 .txt-medium {font-weight: 500!important;}
-	
+.txt-gray, .bold-gray{color: $sec;}
 /*LINKS*/
 .link, .icon-link{
 	display: inline-flex;

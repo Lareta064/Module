@@ -46,3 +46,31 @@
 		.product-card__bottom{color: $ac2;}
 	} 
 }
+.product-link{
+	border-radius: 20px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	row-gap:20px;
+	&__img{
+		flex-shrink: 0;
+		display: flex;
+		justify-content: center;
+		flex-shrink: 0;
+		width: 100%;
+		aspect-ratio: 335 / 285;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+	.bold-20{
+		width: 100%;
+		padding: 20px 30px;
+		line-height: 1.2;
+		color: $pr;
+		transition: .3s;
+	}
+	&:hover .bold-20{color: $ac2;}
+}

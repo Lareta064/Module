@@ -1,0 +1,13 @@
+.single-catalogy .catalogy-menu{
+	width: 100%;
+	max-height: unset;
+	height: auto;
+	.catalogy-menu-item{
+		padding-right: 20px;
+		a{transition: .3s; }
+		&:hover a{color: $ac2;}
+	}
+}
+.single-catalogy .catalogy-menu-link:before {
+	display: none!important;
+}
