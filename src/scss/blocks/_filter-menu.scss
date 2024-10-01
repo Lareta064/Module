@@ -1,0 +1,15 @@
+.filter-title{
+	padding: 10px 20px;
+	font-size: 18px;
+	font-weight: 700;
+}
+.filters-menu{
+	padding: 10px 20px;
+ 	&-item a{padding: 10px;color: $pr; display: block;}
+	&-item a:hover{color: $ac2;}
+ 	&-item.active{font-weight: 700;border-left:2px solid $ac1;}
+	
+}
+.drop-select{
+	padding: 10px 20px;
+}

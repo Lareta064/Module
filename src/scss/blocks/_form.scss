@@ -79,6 +79,7 @@ select:-webkit-autofill:focus {
     font-size: 18px;
     font-weight: 700;
     position: relative;
+    cursor: pointer;
    &:after{
      content: '';
       width: 16px;
@@ -104,7 +105,7 @@ select:-webkit-autofill:focus {
     left: 0;
     right: 0;
     top: 100%;
-    z-index: 3;
+   
     overflow: hidden;
     height: 0;
   }
@@ -124,6 +125,7 @@ select:-webkit-autofill:focus {
   .drop-select__list{height: auto;}
 }
 .custom-checkbox, .custom-radio{
+  cursor: pointer;
   position: relative;
   padding: 10px 20px;
   font-size: 16px;
