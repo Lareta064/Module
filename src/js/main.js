@@ -87,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function (){
 		});
 	}
 
-
 	/* ==============показать модальные окна,  имеют атрибут frame-modal , кнопка, которая его показывает , имеет атрибут frame-btn, Чтобы закрыть такое окно, прописываем кнопке закрытия атрибут frame-close*/
 	const modalFramesOpen = document.querySelectorAll('[frame-btn]');
 	const modalFrames = document.querySelectorAll('[frame-modal]');
@@ -127,144 +126,31 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		}
 	}
-	let bannerTabsTitle = ['Кирпич','Утепление', 'Тротуарная плитка', 'Все для камина', 'Кровля'];
-
-    new Swiper('#bannerTabsContent', {
-        allowTouchMove: false,
-		speed: 800,
-        effect: "fade",
-        loop: true,
-        mousewheel: {
-            forceToAxis: true,
-        },
-        fadeEffect: {
-            crossFade: true
-        },
-        autoplay: {
-            delay: 14700,
-            disableOnInteraction: false,
-        },
-        navigation: {
-            nextEl: '.banner-slider-next',
-            prevEl: '.banner-slider-prev',
-        },
-        pagination: {
-            el: ".tabs-pagination",
-            modifierClass: 'tabs-pagination-bullets',
-            bulletClass: 'tabs-pagination-bullet',
-            bulletActiveClass: 'active',
-            clickable: true,
-            renderBullet: function (index, className) {
-                return '<li class="' + className + '">' + (bannerTabsTitle[index]) + '</li>';
-            },
-        },
-        on: {
-            slideChange: () => {
-                $('.timer-band').removeClass('active');
-                setTimeout(() => {
-                    $('.timer-band').addClass('active');
-                }, 50);
-            },
-        },
-    });
-
-
-	new Swiper('.popular-slider', {
-		slidesPerView: 1,
-		spaceBetween: 20,
-		speed: 1000,
-		pagination: {
-        	el: ".popular-pagination",
-			clickable: true,
-      	},
-		navigation: {
-            nextEl: '.popular-slider-next',
-            prevEl: '.popular-slider-prev',
-        },
-		autoplay: {
-        	delay: 4500,
-        	disableOnInteraction: true,
-     	 },
-		 breakpoints: {
-			424: {
-			slidesPerView: 1.2,
-			spaceBetween: 20,
-			},
-			574: {
-			slidesPerView: 1.5,
-			spaceBetween: 20,
-			},
-			640:{
-				slidesPerView: 2,
-			},
-			768: {
-			slidesPerView: 2.5,
-			spaceBetween: 20,
-			},
-			992: {
-			slidesPerView: 3,
-			spaceBetween: 20,
-			},
-			1200: {
-			slidesPerView: 2.5,
-			spaceBetween: 20,
-			},
-			1365: {
-			slidesPerView: 2.8,
-			spaceBetween: 20,
-			},
-			1440:{
-				slidesPerView: 3,
-				spaceBetween: 20,
-			}
-		},
-		
-	});
-
-	new Swiper('.novelty-slider',{
-		slidesPerView: 1,
-		spaceBetween: 10,
-		speed: 600,
-		navigation: {
-            nextEl: '.novelty-slider-next',
-            prevEl: '.novelty-slider-prev',
-        },
-		breakpoints: {
-			768: {
-			slidesPerView: 1.2,
-			spaceBetween: 20,
-			},
-			992: {
-			slidesPerView: 1.5,
-			spaceBetween: 20,
-			},
-			1199:{
-				slidesPerView: 1.8,
-			    spaceBetween: 20,
-			},
-			1280:{
-				slidesPerView: 2,
-			    spaceBetween: 20,
+	/*.drop-select*/
+	const dropSelect = document.querySelectorAll('.drop-select');
+	if(dropSelect.length > 0){
+		for(let select of dropSelect){
+			const selectBtn = select.querySelector('.drop-select__btn');
+			const selectList = select.querySelector('.drop-select__list');
+			const selectMoreBtn = select.querySelector('.drop-select-more');
+			selectBtn.addEventListener('click', ()=>{
+				if(select.classList.contains('open')){
+					select.classList.remove('open');
+				}else{
+					select.classList.add('open');
+				}
+			});
+			if(selectMoreBtn){
+				selectMoreBtn.addEventListener('click', ()=>{
+					if(select.classList.contains('open--full')){
+						select.classList.remove('open--full');
+						selectMoreBtn.innerHTML='Показать еще';
+					}else{
+						select.classList.add('open--full');
+						selectMoreBtn.innerHTML ='Свернуть';
+					}
+				});
 			}
 		}
-	});
-
-	new Swiper('.clients-slider',{
-		slidesPerView: 'auto',
-		spaceBetween: 10,
-		speed: 600,
-		navigation: {
-            nextEl: '.clients-slider-next',
-            prevEl: '.clients-slider-prev',
-        },
-		breakpoints: {
-			600:{
-				spaceBetween: 20,
-			},
-			1365:{
-				slidesPerView: 6,
-			    
-			}
-		}
-	});
+	}
 });

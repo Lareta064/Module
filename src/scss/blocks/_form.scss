@@ -73,8 +73,11 @@ select:-webkit-autofill:focus {
 .drop-select{
   position: relative;
   &__btn{
-    padding: 20px;
-    font-size: 20px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
     position: relative;
    &:after{
      content: '';
@@ -88,21 +91,60 @@ select:-webkit-autofill:focus {
       position: absolute;
       right: 0;
       top:50%;
-      transform: translateY(-50%);
+      transition: .3s;
+     transform: translateY(-50%) rotate(180deg);
     }
   }
-  
+  &-content{
+    height: 0;
+    overflow: hidden;
+  }
   &__list{
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
     top: 100%;
     z-index: 3;
-    border: 1px solid black;
+    overflow: hidden;
+    height: 0;
   }
-  .custom-checkbox{
-    display: flex;
-    align-items: center;
 
+}
+.drop-select.open{
+  .drop-select__btn:after{
+    transform: translateY(-50%) rotate(0deg);
+  }
+  .drop-select-content{height: auto;}
+  .drop-select__list {
+    height: 246px;
+   
+  }
+}
+.drop-select.open.open--full{
+  .drop-select__list{height: auto;}
+}
+.custom-checkbox, .custom-radio{
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  input[type='radio'], input[type='checkbox']{
+    width: 0.1em;
+    height: 0.1em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  .fake-input{
+    width: 20px;
+    height: 20px;
+    border: 1px solid $sec;
+    border-radius: 4px;
+  }
+  input:checked + .fake-input{
+    background-color: $ac2;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8.5 1L3.5 6L1.5 4' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
+    background-size:10px 7px;
+    border: 1px solid $ac2;
   }
 }
