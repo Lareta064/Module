@@ -8,7 +8,7 @@ section.category
 			.aside-grid__column
 				.filter
 					.filter-title Кирпич
-					
+					//===MENU===
 					ul.filters-menu
 						li.filters-menu-item.active
 							a(href="#!") Клинкерный
@@ -18,49 +18,125 @@ section.category
 							a(href="") Ручная формовка
 						li.filters-menu-item
 							a(href="") Строительный
-			
+					
+					//===BRAND===
+					//=== Если выпадающий список открыт и у кнопки текст Показать еще, то у родительского дива  .drop-select  должен быть еще и класс .open. Если текст кнопки Свернуть все, то у родительского дива  .drop-select должны быть еще и классы  "open  open--full"   ===
+					
 					.drop-select.open
 						.drop-select__btn Бренд
 						.drop-select-content
 							.drop-select__list
 								label.custom-checkbox
-									input(type="checkbox" name="brand" value="brand1")
+									input(type="checkbox" name="brand1" value="brand1")
 									span.fake-input
-									span Brand1
+									span Braer
 								label.custom-checkbox
-									input(type="checkbox" name="brand" value="brand1")
+									input(type="checkbox" name="brand2" value="brand2")
 									span.fake-input
-									span Brand2
+									span Старый Оскол
 								label.custom-checkbox
-									input(type="checkbox" name="brand" value="brand1")
+									input(type="checkbox" name="brand3" value="brand3")
 									span.fake-input
-									span Brand3
+									span ЛСР
 								label.custom-checkbox
-									input(type="checkbox" name="brand" value="brand1")
+									input(type="checkbox" name="brand4" value="brand4")
 									span.fake-input
-									span Brand4
+									span КС Керамик
 								label.custom-checkbox
-									input(type="checkbox" name="brand" value="brand1")
+									input(type="checkbox" name="brand5" value="brand5")
 									span.fake-input
-									span Brand5
+									span Железногорский
 								label.custom-checkbox
-									input(type="checkbox" name="brand" value="brand1")
+									input(type="checkbox" name="brand6" value="brand6")
 									span.fake-input
-									span Brand6
+									span Маркинский
 								label.custom-checkbox
-									input(type="checkbox" name="brand" value="brand1")
+									input(type="checkbox" name="brand7" value="brand7")
+									span.fake-input
+									span Старый Оскол
+								label.custom-checkbox
+									input(type="checkbox" name="brand8" value="brand8")
+									span.fake-input
+									span ЛСР
+								label.custom-checkbox
+									input(type="checkbox" name="brand9" value="brand9")
+									span.fake-input
+									span КС Керамик
+							button.drop-select-more Показать еще 
+					//===FORMAT===
+					.drop-select.open
+						.drop-select__btn Формат кирпича
+						.drop-select-content
+							.drop-select__list
+								label.custom-checkbox
+									input(type="checkbox" name="format1" value="format1")
+									span.fake-input
+									span 1 НФ
+								label.custom-checkbox
+									input(type="checkbox" name="format2" value="format2")
+									span.fake-input
+									span 0,7 НФ
+								label.custom-checkbox
+									input(type="checkbox" name="format3" value="format3")
+									span.fake-input
+									span 1,4 НФ
+								label.custom-checkbox
+									input(type="checkbox" name="format4" value="format4")
+									span.fake-input
+									span WDF
+								label.custom-checkbox
+									input(type="checkbox" name="format5" value="format5")
+									span.fake-input
+									span Ригельный
+								label.custom-checkbox
+									input(type="checkbox" name="format6" value="format6")
+									span.fake-input
+									span DF
+								label.custom-checkbox
+									input(type="checkbox" name="format7" value="format7")
 									span.fake-input
 									span Brand7
+								
+							button.drop-select-more Показать еще 			
+					//===COLOR===
+					.drop-select.drop-select--color.open.open--full
+						.drop-select__btn Цвет
+						.drop-select-content
+							.drop-select__list
 								label.custom-checkbox
-									input(type="checkbox" name="brand" value="brand1")
+									input(type="checkbox" name="format1" value="format1")
 									span.fake-input
-									span Brand8
+									span.color-circle(style="background:white")
+									span Белый
 								label.custom-checkbox
-									input(type="checkbox" name="brand" value="brand1")
+									input(type="checkbox" name="format2" value="format2")
 									span.fake-input
-									span Brand9
-							button.drop-select-more Показать еще 
-			
+									span.color-circle(style="background:#FE0000")
+									span Красный
+								label.custom-checkbox
+									input(type="checkbox" name="format3" value="format3")
+									span.fake-input
+									span.color-circle(style="background:#FEA500")
+									span Солома
+								label.custom-checkbox
+									input(type="checkbox" name="format4" value="format4")
+									span.fake-input
+									span.color-circle(style="background:#833505")
+									span Темный
+								label.custom-checkbox
+									input(type="checkbox" name="format5" value="format5")
+									span.fake-input
+									span.color-circle(style="background:#655353")
+									span Баварская кладка
+								
+							button.drop-select-more Свернуть все
+					.filter-footer
+						a(href="#!").btn
+							span Применить
+							+svg('plus')
+						a(href="#!").btn-light
+							span Сбросить
+							+svg('reload')
 			.aside-grid__main
 				.three-columns-grid
 					//==== single card===

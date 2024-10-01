@@ -20,3 +20,17 @@
 		padding-block: 10px;
 	}
 }
+.filter-footer{
+	&>*{width: 100%;}
+	&>*+*{margin-top: 20px;}
+}
+.drop-select--color label{
+	 span.color-circle {
+		border: 1px solid $sec1;
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		border-radius: 30px;
+		
+	}
+}
