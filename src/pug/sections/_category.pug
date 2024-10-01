@@ -1,0 +1,64 @@
+section.category
+	.container
+		+brcr('Главная', 'Каталог','Кирпич','Клинкерный')
+		.section-title.inline-row
+			h2.h2 Клинкерный кирпич
+			p.bold-gray 870 товаров
+		.aside-grid
+			.aside-grid__column
+				.filters-menu
+					.filters-menu__nav
+						p.bold-18 Кирпич
+						ul
+							li
+								a(href="#!") Клинкерный
+							li
+								a(href="") Керамический
+							li
+								a(href="") Ручная формовка
+							li
+								a(href="") Строительный
+			
+					.drop-select
+						.drop-select__btn Бренд
+						
+						.drop-select-list
+							label.custom-checkbox
+								input(type="checkbox" name="brand" value="brand1")
+								span Brand1
+							label.custom-checkbox
+								input(type="checkbox" name="brand" value="brand1")
+								span Brand1
+							label.custom-checkbox
+								input(type="checkbox" name="brand" value="brand1")
+								span Brand1
+							label.custom-checkbox
+								input(type="checkbox" name="brand" value="brand1")
+								span Brand1
+							
+							button.show-more Показать еще 
+			
+			.aside-grid__main
+				.three-columns-grid
+					//==== single card===
+					a(href="catalogy.html").product-link
+						.product-link__img
+							img(src="./img/single-cat1.webp", srcset="./img/single-cat1@2x.webp 2x" width="335", height="282" alt="alt")
+						p.bold-20 Клинкерный
+
+					//==== single card===
+					a(href="catalogy.html").product-link
+						.product-link__img
+							img(src="./img/single-cat2.webp", srcset="./img/single-cat2@2x.webp 2x" width="335", height="282" alt="alt")
+						p.bold-20 Керамический
+					//==== single card===
+					a(href="catalogy.html").product-link
+						.product-link__img
+							img(src="./img/single-cat3.webp", srcset="./img/single-cat3@2x.webp 2x" width="335", height="282" alt="alt")
+						p.bold-20 Ручная формовка
+					//==== single card===
+					a(href="catalogy.html").product-link
+						.product-link__img
+							img(src="./img/single-cat4.webp", srcset="./img/single-cat4@2x.webp 2x" width="335", height="282" alt="alt")
+						p.bold-20 Забутовочный
+					
