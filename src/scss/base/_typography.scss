@@ -10,9 +10,6 @@
 	@media (max-width: 1439px) {font-size: 82px;}
 	@media (max-width: 1199px) {font-size: 62px;}
 	@media (max-width: 767px) {font-size: 42px;}
-	
-	
-	
 }
 .h2{
 	font-size: 56px;
@@ -115,4 +112,11 @@
 }
 .social-item:hover{
 	svg{color: $ac2;}
+}
+.h1{
+	font-size: 100px!important;
+	
+	@media (min-width: 1024px) and (max-width: 1199px) {
+		font-size: 80px !important;
+	}
 }

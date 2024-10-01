@@ -1,18 +1,19 @@
 extends ../layouts/layout.pug
 
 block content
-	include ../sections/_header.pug
-	//=============MAIN===========
-	main.main-page
-		include ../sections/_header-slider
-		include ../sections/_banner-picture
-		include ../sections/_statistic
-		include ../sections/_popular
-		include ../sections/_novelty
-		include ../sections/_partners
-		include ../sections/_clients
-		include ../sections/_contacts
-
+	.page-wrapper
+		include ../sections/_header.pug
+		//=============MAIN===========
+		main.main-page
+			include ../sections/_header-slider
+			include ../sections/_banner-picture
+			include ../sections/_statistic
+			include ../sections/_popular
+			include ../sections/_novelty
+			include ../sections/_partners
+			include ../sections/_clients
+			include ../sections/_contacts
+		include ../sections/_footer.pug
 
 
 

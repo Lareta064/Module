@@ -36,6 +36,13 @@ main{
 		padding-bottom: 60px;
 	}
 }
+.page-wrapper{
+	display: flex;
+	flex-direction: column;
+	header, main, footer{width: 100%;}
+	header, footer{flex-shrink:0;}
+	main{flex-grow: 1;}
+}
 .inner-main{
 	padding-top: 60px;
 	@media (max-width: 767px) {

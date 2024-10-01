@@ -68,6 +68,11 @@
 		}
 	}
 }
+
+
+.nav-menu-has-drop:hover .nav-menu-arrow svg {
+	transform: rotate(180deg);
+}
 @keyframes fadeUp{
 	from{
 		transform: translateY(-10px);
