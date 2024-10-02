@@ -150,3 +150,72 @@ select:-webkit-autofill:focus {
     border: 1px solid $ac2;
   }
 }
+/*drop-select*/
+.custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.custom-select-trigger {
+  display: flex;
+  align-items: center;
+  border:1px solid $sec;
+  background: white;
+  z-index: 2;
+  border-radius: 12px;
+  padding: 5px 16px;
+  width: 90px;
+  height: 54px;
+  position: relative;
+  color: $sec;
+  cursor: pointer;
+}
+
+.custom-select-trigger:after {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 7px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='7' viewBox='0 0 14 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13 6L7.84853 0.848528C7.3799 0.379898 6.6201 0.379898 6.15147 0.848527L0.999999 6' stroke='%23000000' stroke-linecap='round' /%3e%3c/svg%3e");
+  position: absolute;
+  right: 16px;
+  top: 22px;
+  pointer-events: none;
+  transform: rotate(180deg);
+  z-index: 3;
+}
+
+.open .custom-select-trigger:after { transform: rotate(0);}
+
+ 
+
+
+.open .custom-options{
+  margin-top: -7px;
+  border: 1px solid $sec;
+  padding-top: 7px;
+}
+.custom-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.3s ease;
+  transition: max-height 0.2s ease;
+  z-index: 1;
+  
+  border-radius: 0 0 12px 12px;
+  
+  z-index: 1;
+  
+}
+
+.custom-option {
+  padding: 5px 16px;
+  display: block;
+  cursor: pointer;
+}

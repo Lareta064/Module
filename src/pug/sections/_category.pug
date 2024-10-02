@@ -141,7 +141,24 @@ section.category
 			//=== MAIN CONTENT ===
 			.aside-grid__main
 				.sorting-filters
+					.sorting-types.flex-row
+						p.bold-18 Сортировка
+						.sorting-list.flex-row
+							a(href="#!").sorting-list-item.active По популярности
+							a(href="#!").sorting-list-item Сначала дешевые
+							a(href="#!").sorting-list-item Сначала дорогие
+
 					
+					.drop-select
+						p.bold-18 Показать
+						.custom-select.sorting-count
+							.custom-select-trigger 24
+							.custom-options
+								span.custom-option(data-value="24") 24
+								span.custom-option(data-value="32") 32
+								span.custom-option(data-value="48") 48
+								span.custom-option(data-value="64") 64
+		
 				
 				.three-columns-grid
 					

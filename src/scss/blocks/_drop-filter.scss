@@ -38,3 +38,21 @@
 .filter>*+*{
 	border-top: 1px solid $sec2;
 }
+.sorting-filters{
+	justify-content: space-between;
+	padding-block:15px;
+	&>*{flex-shrink:0;}
+}
+.custom-select.sorting-count{
+	width: 90px;
+}
+.sorting-list-item{color: $sec;}
+.sorting-types .sorting-list-item{
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+		
+}
+.sorting-types .sorting-list-item.active{color: $pr;}
+
+	
+
