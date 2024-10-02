@@ -21,12 +21,12 @@ section.category
 								a(href="") Строительный
 					
 					//===BRAND===
-					//=== Если выпадающий список открыт и у кнопки текст Показать еще, то у родительского дива  .drop-select  должен быть еще и класс .open. Если текст кнопки Свернуть все, то у родительского дива  .drop-select должны быть еще и классы  "open  open--full"   ===
+					//=== Если выпадающий список открыт и у кнопки текст Показать еще, то у родительского дива  .drop-filter  должен быть еще и класс .open. Если текст кнопки Свернуть все, то у родительского дива  .drop-filter должны быть еще и классы  "open  open--full"   ===
 					
-					.drop-select.drop-select--show-more.open
-						.drop-select__btn Бренд
-						.drop-select-content
-							.drop-select__list
+					.drop-filter.drop-filter--show-more.open
+						.drop-filter__btn Бренд
+						.drop-filter-content
+							.drop-filter__list
 								label.custom-checkbox
 									input(type="checkbox" name="brand1" value="brand1")
 									span.fake-input
@@ -63,12 +63,12 @@ section.category
 									input(type="checkbox" name="brand9" value="brand9")
 									span.fake-input
 									span КС Керамик
-							button(type="button").drop-select-more Показать еще 
+							button(type="button").drop-filter-more Показать еще 
 					//===FORMAT===
-					.drop-select.open.drop-select--show-more
-						.drop-select__btn Формат кирпича
-						.drop-select-content
-							.drop-select__list
+					.drop-filter.open.drop-filter--show-more
+						.drop-filter__btn Формат кирпича
+						.drop-filter-content
+							.drop-filter__list
 								label.custom-checkbox
 									input(type="checkbox" name="format1" value="format1")
 									span.fake-input
@@ -98,12 +98,12 @@ section.category
 									span.fake-input
 									span Brand7
 								
-							button(type="button").drop-select-more Показать еще 			
+							button(type="button").drop-filter-more Показать еще 			
 					//===COLOR===
-					.drop-select.drop-select--color.open.open--full
-						.drop-select__btn Цвет
-						.drop-select-content
-							.drop-select__list
+					.drop-filter.drop-filter--color.open.open--full
+						.drop-filter__btn Цвет
+						.drop-filter-content
+							.drop-filter__list
 								label.custom-checkbox
 									input(type="checkbox" name="format1" value="color_white")
 									span.fake-input
@@ -130,11 +130,11 @@ section.category
 									span.color-circle(style="background:#655353")
 									span Баварская кладка
 								
-							button(type="button").drop-select-more.drop-select-close Свернуть все
+							button(type="button").drop-filter-more.drop-filter-close Свернуть все
 					.filter-footer
 						button(type="submit").btn
 							span Применить
-							+svg('plus')
+							+svg('check')
 						button(type="reset").btn-light
 							span Сбросить
 							+svg('reload')

@@ -126,27 +126,27 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		}
 	}
-	/*.drop-select*/
-	const dropSelect = document.querySelectorAll('.drop-select');
+	/*.drop-filter*/
+	const dropSelect = document.querySelectorAll('.drop-filter');
 
 	if (dropSelect.length > 0) {
 		dropSelect.forEach((select) => {
-			const selectBtn = select.querySelector('.drop-select__btn');
-			const selectMoreBtn = select.querySelector('.drop-select-more');
+			const selectBtn = select.querySelector('.drop-filter__btn');
+			const selectMoreBtn = select.querySelector('.drop-filter-more');
 
 			// Функция для открытия списка
 			const openSelect = () => {
 				select.classList.add('open');
-				if (select.classList.contains('drop-select--show-more') && selectMoreBtn) {
+				if (select.classList.contains('drop-filter--show-more') && selectMoreBtn) {
 					// Для блоков с "Показать еще", открываем частично и ставим кнопку "Показать еще"
 					select.classList.remove('open--full');
 					selectMoreBtn.innerHTML = 'Показать еще';
-					selectMoreBtn.classList.remove('drop-select-close');
+					selectMoreBtn.classList.remove('drop-filter-close');
 				} else if (selectMoreBtn) {
 					// Для блоков без "Показать еще", сразу показываем весь список
 					select.classList.add('open--full');
 					selectMoreBtn.innerHTML = 'Свернуть все';
-					selectMoreBtn.classList.add('drop-select-close');
+					selectMoreBtn.classList.add('drop-filter-close');
 				}
 			};
 
@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function (){
 					// Если список свернут, разворачиваем его
 					select.classList.add('open--full');
 					selectMoreBtn.innerHTML = 'Свернуть все';
-					selectMoreBtn.classList.add('drop-select-close');
+					selectMoreBtn.classList.add('drop-filter-close');
 					}
 				});
 			}

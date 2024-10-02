@@ -70,7 +70,7 @@ select:-webkit-autofill:focus {
       display: block;
     }
 }
-.drop-select{
+.drop-filter{
   position: relative;
   &__btn{
     height: 43px;
@@ -111,18 +111,18 @@ select:-webkit-autofill:focus {
   }
 
 }
-.drop-select.open{
-  .drop-select__btn:after{
+.drop-filter.open{
+  .drop-filter__btn:after{
     transform: translateY(-50%) rotate(0deg);
   }
-  .drop-select-content{height: auto;}
-  .drop-select__list {
+  .drop-filter-content{height: auto;}
+  .drop-filter__list {
     height: 246px;
    
   }
 }
-.drop-select.open.open--full{
-  .drop-select__list{height: auto;}
+.drop-filter.open.open--full{
+  .drop-filter__list{height: auto;}
 }
 .custom-checkbox, .custom-radio{
   cursor: pointer;
