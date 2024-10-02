@@ -1,0 +1,158 @@
+section.gallery
+	.container
+		+brcr('Главная', 'Галерея')
+		h2.h2 Галерея
+		.aside-grid
+			#filter-popup.aside-grid__column.aside-grid--popup
+				.aside-grid-header.flex-row
+					p.bold-18 Фильтр
+					button.close-btn
+						+svg('cross')
+				form.filter
+					
+					//===BRAND===
+					//=== Если есть  выпадающий список, то у .drop-filter надо добавить еще класс.drop-filter--show-more. Если фильтре раскрыт по умолчанию , то , то у родительского дива  .drop-filter  должен быть еще и класс .open. Если текст кнопки Свернуть все, то у родительского дива  .drop-filter должны быть еще и классы  "open  open--full"  , а у кнопки  Свернуть все должны быть  классы .drop-filter-more.drop-filter-close  ===
+					
+					.drop-filter.drop-filter--show-more.open
+						.drop-filter__btn Бренд
+						.drop-filter-content
+							.drop-filter__list
+								label.custom-checkbox
+									input(type="checkbox" name="brand1" value="brand1")
+									span.fake-input
+									span Braer
+								label.custom-checkbox
+									input(type="checkbox" name="brand2" value="brand2")
+									span.fake-input
+									span Старый Оскол
+								label.custom-checkbox
+									input(type="checkbox" name="brand3" value="brand3")
+									span.fake-input
+									span ЛСР
+								label.custom-checkbox
+									input(type="checkbox" name="brand4" value="brand4")
+									span.fake-input
+									span КС Керамик
+								label.custom-checkbox
+									input(type="checkbox" name="brand5" value="brand5")
+									span.fake-input
+									span Железногорский
+								label.custom-checkbox
+									input(type="checkbox" name="brand6" value="brand6")
+									span.fake-input
+									span Маркинский
+								label.custom-checkbox
+									input(type="checkbox" name="brand7" value="brand7")
+									span.fake-input
+									span Старый Оскол
+								label.custom-checkbox
+									input(type="checkbox" name="brand8" value="brand8")
+									span.fake-input
+									span ЛСР
+								label.custom-checkbox
+									input(type="checkbox" name="brand9" value="brand9")
+									span.fake-input
+									span КС Керамик
+							button(type="button").drop-filter-more Показать еще 
+					//===FORMAT===
+					.drop-filter
+						.drop-filter__btn Тип объекта
+						.drop-filter-content
+							.drop-filter__list
+								label.custom-checkbox
+									input(type="checkbox" name="object1" value="object1")
+									span.fake-input
+									span Тип 1
+								label.custom-checkbox
+									input(type="checkbox" name="object2" value="object2")
+									span.fake-input
+									span Тип 2
+								label.custom-checkbox
+									input(type="checkbox" name="object3" value="object3")
+									span.fake-input
+									span Тип 3
+								label.custom-checkbox
+									input(type="checkbox" name="object4" value="object4")
+									span.fake-input
+									span Тип 4
+								label.custom-checkbox
+									input(type="checkbox" name="object5" value="object5")
+									span.fake-input
+									span Тип 5
+							button(type="button").drop-filter-more.drop-filter-close Свернуть все
+					//===COLOR===
+					.drop-filter
+						.drop-filter__btn Материал
+						.drop-filter-content
+							.drop-filter__list
+								label.custom-checkbox
+									input(type="checkbox" name="format1" value="color_white")
+									span.fake-input
+									
+									span Белый
+								label.custom-checkbox
+									input(type="checkbox" name="material1" value="material1")
+									span.fake-input
+									
+									span Красный
+								label.custom-checkbox
+									input(type="checkbox" name="material2" value="material2")
+									span.fake-input
+									
+									span Солома
+								label.custom-checkbox
+									input(type="checkbox" name="material3" value="material3")
+									span.fake-input
+									
+									span Темный
+								label.custom-checkbox
+									input(type="checkbox" name="material4" value="material4")
+									span.fake-input
+									
+									span Баварская кладка
+								
+							button(type="button").drop-filter-more.drop-filter-close Свернуть все
+					.filter-footer
+						button(type="submit").btn
+							span Применить
+							+svg('check')
+						button(type="reset").btn-light
+							span Сбросить
+							+svg('reload')
+			//=== MAIN CONTENT ===
+			.aside-grid__main
+				//===== КНОПКА ОТКРЫТИЯ ФИЛЬТРА НА МОБ ВЕРСИИ ===
+				button.btn-outline#filter-popup-btn Фильтр
+					+svg('filter')
+				//=====CARDS WRAPPER ===
+				.gallery-cards.two-columns-grid
+					a(href="#!").gallery-card
+						.gallery-card__img
+							img(src="./img/gallery1.webp", srcset="/img/gallery1@2x.webp 2x"  width="513" height="332" alt="alt")
+						.gallery-card__title Московский квартал
+					a(href="#!").gallery-card
+						.gallery-card__img
+							img(src="./img/gallery2.webp", srcset="/img/gallery2@2x.webp 2x"  width="513" height="332" alt="alt")
+						.gallery-card__title Жилой квартал «Весна»
+					a(href="#!").gallery-card
+						.gallery-card__img
+							img(src="./img/gallery3.webp", srcset="/img/gallery3@2x.webp 2x"  width="513" height="332" alt="alt")
+						.gallery-card__title Жилой квартал «Сталинка»
+					a(href="#!").gallery-card
+						.gallery-card__img
+							img(src="./img/gallery4.webp", srcset="/img/gallery4@2x.webp 2x"  width="513" height="332" alt="alt")
+						.gallery-card__title Жилой квартал «Этажи»
+					a(href="#!").gallery-card
+						.gallery-card__img
+							img(src="./img/gallery5.webp", srcset="/img/gallery5@2x.webp 2x"  width="513" height="332" alt="alt")
+						.gallery-card__title Жилой квартал «София»
+					a(href="#!").gallery-card
+						.gallery-card__img
+							img(src="./img/gallery6.webp", srcset="/img/gallery6@2x.webp 2x"  width="513" height="332" alt="alt")
+						.gallery-card__title ЖК «Произведение на Первомайской»				
+				
+				.aside-grid__main-footer
+					button.btn-outline.w-100 Показать еще
+						+svg-ui('plus')
+					
+					include ../blocks/_pagination

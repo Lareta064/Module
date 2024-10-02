@@ -26,7 +26,7 @@ section.category
 								a(href="") Строительный
 					
 					//===BRAND===
-					//=== Если выпадающий список открыт и у кнопки текст Показать еще, то у родительского дива  .drop-filter  должен быть еще и класс .open. Если текст кнопки Свернуть все, то у родительского дива  .drop-filter должны быть еще и классы  "open  open--full"   ===
+					//=== Если есть  выпадающий список, то у .drop-filter надо добавить еще класс.drop-filter--show-more. Если фильтре раскрыт по умолчанию , то , то у родительского дива  .drop-filter  должен быть еще и класс .open. Если текст кнопки Свернуть все, то у родительского дива  .drop-filter должны быть еще и классы  "open  open--full"  , а у кнопки  Свернуть все должны быть  классы .drop-filter-more.drop-filter-close  ===
 					
 					.drop-filter.drop-filter--show-more.open
 						.drop-filter__btn Бренд
@@ -185,7 +185,7 @@ section.category
 					+prod-card(3, 'Кирпич кладка гладкий, 250*85*65 мм', 'БРАЕР', 44)
 					+prod-card(1, 'Кирпич, Солома 1 НФ', 'Старый Оскол', 44)
 				
-				.category-footer
+				.aside-grid__main-footer
 					button.btn-outline.w-100 Показать еще
 						+svg-ui('plus')
 					
