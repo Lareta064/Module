@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	const catalogyBtnDesktop = document.getElementById('cat-btn-desk');
 	const catalogyMenu = document.getElementById('cat-menu');
 	const catMenuCloseMobile = document.querySelector('#close-cat-menu');
+	const filterPopup = document.getElementById('filter-popup');
 	const bodyEl = document.body;
 	
 	if (menuToggle) {
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			    mobileMenu.classList.add('active');
 				bodyEl.classList.add('lock');
 				catalogyMenu.classList.remove('active');
+				if(filterPopup){filterPopup.classList.remove('active');}
 			}
 		});
 		
@@ -49,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				catalogyMenu.classList.add('active');
 				mobileMenu.classList.remove('active');
 				menuToggle.classList.remove('active');
+				if(filterPopup){filterPopup.classList.remove('active');}
 				bodyEl.classList.add('lock');
 			}
 		});
@@ -126,27 +129,27 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		}
 	}
-	/*.drop-select*/
-	const dropSelect = document.querySelectorAll('.drop-select');
+	/*.drop-filter*/
+	const dropSelect = document.querySelectorAll('.drop-filter');
 
 	if (dropSelect.length > 0) {
 		dropSelect.forEach((select) => {
-			const selectBtn = select.querySelector('.drop-select__btn');
-			const selectMoreBtn = select.querySelector('.drop-select-more');
+			const selectBtn = select.querySelector('.drop-filter__btn');
+			const selectMoreBtn = select.querySelector('.drop-filter-more');
 
 			// Функция для открытия списка
 			const openSelect = () => {
 				select.classList.add('open');
-				if (select.classList.contains('drop-select--show-more') && selectMoreBtn) {
+				if (select.classList.contains('drop-filter--show-more') && selectMoreBtn) {
 					// Для блоков с "Показать еще", открываем частично и ставим кнопку "Показать еще"
 					select.classList.remove('open--full');
 					selectMoreBtn.innerHTML = 'Показать еще';
-					selectMoreBtn.classList.remove('drop-select-close');
+					selectMoreBtn.classList.remove('drop-filter-close');
 				} else if (selectMoreBtn) {
 					// Для блоков без "Показать еще", сразу показываем весь список
 					select.classList.add('open--full');
 					selectMoreBtn.innerHTML = 'Свернуть все';
-					selectMoreBtn.classList.add('drop-select-close');
+					selectMoreBtn.classList.add('drop-filter-close');
 				}
 			};
 
@@ -175,13 +178,71 @@ document.addEventListener("DOMContentLoaded", function (){
 					// Если список свернут, разворачиваем его
 					select.classList.add('open--full');
 					selectMoreBtn.innerHTML = 'Свернуть все';
-					selectMoreBtn.classList.add('drop-select-close');
+					selectMoreBtn.classList.add('drop-filter-close');
 					}
 				});
 			}
 		});
 	}
 
+	/*========CUSTOM SELECT======= */
+	const customSelects = document.querySelectorAll('.custom-select');
 
+	customSelects.forEach((customSelect) => {
+		const selectTrigger = customSelect.querySelector('.custom-select-trigger');
+		const optionsContainer = customSelect.querySelector('.custom-options');
+		const optionsList = customSelect.querySelectorAll('.custom-option');
 
+		// Toggle options dropdown
+		selectTrigger.addEventListener('click', function (e) {
+			e.stopPropagation(); // Останавливаем распространение события
+			const isOpen = customSelect.classList.contains('open');
+			closeAllSelects();
+			if (!isOpen) {
+				customSelect.classList.add('open');
+				optionsContainer.style.maxHeight = optionsContainer.scrollHeight + 'px';
+			} else {
+				optionsContainer.style.maxHeight = '0';
+			}
+		});
+
+		// Update selected option
+		optionsList.forEach((option) => {
+			option.addEventListener('click', function () {
+				selectTrigger.textContent = option.textContent;
+				selectTrigger.dataset.value = option.dataset.value;
+				customSelect.classList.remove('open');
+				optionsContainer.style.maxHeight = '0';
+			});
+		});
+	});
+
+	// Close dropdown if clicked outside
+	document.addEventListener('click', function () {
+		closeAllSelects();
+	});
+
+	function closeAllSelects() {
+		customSelects.forEach((select) => {
+			select.classList.remove('open');
+			const optionsContainer = select.querySelector('.custom-options');
+			if (optionsContainer) {
+				optionsContainer.style.maxHeight = '0';
+			}
+		});
+	}
+    //=====FILTER POPUP ===
+	
+	if(filterPopup){
+		const filterOpenBtn = document.getElementById('filter-popup-btn');
+		const filterCloseBtn = filterPopup.querySelector('.close-btn');
+		filterOpenBtn.addEventListener('click', ()=>{
+			filterPopup.classList.add('active');
+			bodyEl.classList.add('lock');
+		});
+		filterCloseBtn.addEventListener('click', ()=>{
+			filterPopup.classList.remove('active');
+			bodyEl.classList.remove('lock');
+		});
+	}
 });

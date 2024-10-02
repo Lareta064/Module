@@ -8,9 +8,8 @@ mixin prod-card(img, txt1, txt2, price)
 			p !{txt1}
 			span !{txt2}
 		
-		.product-card__bottom
-			p !{price}
-				span &#8381;/шт
+		.product-card__price !{price}
+			span &#8381;/шт
 
 mixin prod-card-ui(img, txt1, txt2, price)
 	//====card===
@@ -23,6 +22,5 @@ mixin prod-card-ui(img, txt1, txt2, price)
 			p !{txt1}
 			span !{txt2}
 		
-		.product-card__bottom
-			p !{price}
-				span &#8381;/шт
+		.product-card__bottom !{price}
+			span &#8381;/шт

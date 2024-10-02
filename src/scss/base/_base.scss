@@ -150,8 +150,7 @@ input[type="submit"] {
 .d-grid{
 	display: grid;
 }
-.flex-row,.pagination,.stat-item,.tabs-btns,.nav-menu,.header-center-row,.flex-center,.close-btn,.slider-arrows,.slider-controls,.centered-wrapper, .icon-txt,.social-links, .social-block,.custom-checkbox,
-.custom-radio{
+.flex-row,.pagination,.stat-item,.tabs-btns,.nav-menu,.header-center-row,.flex-center,.close-btn,.slider-arrows,.slider-controls,.centered-wrapper, .icon-txt,.social-links, .social-block,.custom-checkbox,.sorting-filters,.drop-select,.custom-radio{
 	display: flex;
 	align-items: center;
 	column-gap: 10px;
@@ -182,3 +181,4 @@ input[type="submit"] {
 		padding-top: 60px;
 	}
 }
+.w-100{width: 100%!important;}

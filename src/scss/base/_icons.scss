@@ -27,7 +27,7 @@
 	height: 6px;
 	color: #6D6C5E;
 }
-.svg-book,.svg-reload{
+.svg-book,.svg-reload, .svg-filter{
 	width: 20px;
 	height: 20px;
 }
@@ -63,9 +63,14 @@
 .svg-inst:hover{
 	color: $ac2;
 }
-.svg-bar{color: #22231D;}
+.svg-bar,.svg-filter,
+.svg-sort{color: #22231D;}
 .svg-check{
 	width: 24px;
 	height: 24px;
 	color: #22231D;
 }
+ .svg-sort{
+	width: 20px;
+	height: 16px;
+ }

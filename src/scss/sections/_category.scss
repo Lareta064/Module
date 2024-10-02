@@ -1,0 +1,17 @@
+.category-cards.three-columns-grid{
+	.product-card{
+		
+		@media (max-width: 767px) {
+		max-width: 380px;
+		margin-left: auto;
+		margin-right: auto;
+		
+		}
+	}
+}
+.sorting-filters-btn{
+	display: none;
+	@media (max-width: 1023px) {
+	  display: flex;
+	}
+}
