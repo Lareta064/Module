@@ -118,10 +118,3 @@
 .social-item:hover{
 	svg{color: $ac2!important;}
 }
-.h1{
-	font-size: 100px!important;
-	
-	@media (min-width: 1024px) and (max-width: 1199px) {
-		font-size: 80px !important;
-	}
-}

@@ -158,12 +158,15 @@ section.category
 								span.custom-option(data-value="32") 32
 								span.custom-option(data-value="48") 48
 								span.custom-option(data-value="64") 64
-		
-				
-				.three-columns-grid
+				.category-cards.three-columns-grid
 					
 					+prod-card(1, 'Кирпич, Солома 1 НФ', 'Старый Оскол', 44)
 					+prod-card(2, 'Многослойная черепица Технониколь', 'SHINGLAS', 1900)
 					+prod-card(3, 'Кирпич кладка гладкий, 250*85*65 мм', 'БРАЕР', 44)
 					+prod-card(1, 'Кирпич, Солома 1 НФ', 'Старый Оскол', 44)
+				
+				.category-footer
+					button.btn-outline.w-100 Показать еще
+						+svg-ui('plus')
 					
+					include ../blocks/_pagination
