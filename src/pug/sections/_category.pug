@@ -6,7 +6,7 @@ section.category
 			p.bold-gray 870 товаров
 		.aside-grid
 			.aside-grid__column
-				.filter
+				form.filter
 					.filter-title Кирпич
 					//===MENU===
 					ul.filters-menu
@@ -22,7 +22,7 @@ section.category
 					//===BRAND===
 					//=== Если выпадающий список открыт и у кнопки текст Показать еще, то у родительского дива  .drop-select  должен быть еще и класс .open. Если текст кнопки Свернуть все, то у родительского дива  .drop-select должны быть еще и классы  "open  open--full"   ===
 					
-					.drop-select.open
+					.drop-select.drop-select--show-more.open
 						.drop-select__btn Бренд
 						.drop-select-content
 							.drop-select__list
@@ -62,9 +62,9 @@ section.category
 									input(type="checkbox" name="brand9" value="brand9")
 									span.fake-input
 									span КС Керамик
-							button.drop-select-more Показать еще 
+							button(type="button").drop-select-more Показать еще 
 					//===FORMAT===
-					.drop-select.open
+					.drop-select.open.drop-select--show-more
 						.drop-select__btn Формат кирпича
 						.drop-select-content
 							.drop-select__list
@@ -97,46 +97,47 @@ section.category
 									span.fake-input
 									span Brand7
 								
-							button.drop-select-more Показать еще 			
+							button(type="button").drop-select-more Показать еще 			
 					//===COLOR===
 					.drop-select.drop-select--color.open.open--full
 						.drop-select__btn Цвет
 						.drop-select-content
 							.drop-select__list
 								label.custom-checkbox
-									input(type="checkbox" name="format1" value="format1")
+									input(type="checkbox" name="format1" value="color_white")
 									span.fake-input
 									span.color-circle(style="background:white")
 									span Белый
 								label.custom-checkbox
-									input(type="checkbox" name="format2" value="format2")
+									input(type="checkbox" name="color_red" value="format2")
 									span.fake-input
 									span.color-circle(style="background:#FE0000")
 									span Красный
 								label.custom-checkbox
-									input(type="checkbox" name="format3" value="format3")
+									input(type="checkbox" name="format3" value="color_soloma")
 									span.fake-input
 									span.color-circle(style="background:#FEA500")
 									span Солома
 								label.custom-checkbox
-									input(type="checkbox" name="format4" value="format4")
+									input(type="checkbox" name="format4" value="color_dark")
 									span.fake-input
 									span.color-circle(style="background:#833505")
 									span Темный
 								label.custom-checkbox
-									input(type="checkbox" name="format5" value="format5")
+									input(type="checkbox" name="format5" value="color_bavar")
 									span.fake-input
 									span.color-circle(style="background:#655353")
 									span Баварская кладка
 								
-							button.drop-select-more Свернуть все
+							button(type="button").drop-select-more.drop-select-close Свернуть все
 					.filter-footer
-						a(href="#!").btn
+						button(type="submit").btn
 							span Применить
 							+svg('plus')
-						a(href="#!").btn-light
+						button(type="reset").btn-light
 							span Сбросить
 							+svg('reload')
+			//=== MAIN CONTENT ===
 			.aside-grid__main
 				.three-columns-grid
 					//==== single card===

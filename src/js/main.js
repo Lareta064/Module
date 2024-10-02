@@ -128,31 +128,60 @@ document.addEventListener("DOMContentLoaded", function (){
 	}
 	/*.drop-select*/
 	const dropSelect = document.querySelectorAll('.drop-select');
-	if(dropSelect.length > 0){
-		for(let select of dropSelect){
-			const selectBtn = select.querySelector('.drop-select__btn');
-			const selectList = select.querySelector('.drop-select__list');
-			const selectMoreBtn = select.querySelector('.drop-select-more');
-			selectBtn.addEventListener('click', ()=>{
-				if(select.classList.contains('open')){
-					select.classList.remove('open');
-				}else{
-					select.classList.add('open');
-				}
-			});
-			if(selectMoreBtn){
-				selectMoreBtn.addEventListener('click', ()=>{
-					if(select.classList.contains('open--full')){
-						select.classList.remove('open--full');
-						select.classList.remove('open');
 
-						selectMoreBtn.innerHTML='Показать еще';
-					}else{
-						select.classList.add('open--full');
-						selectMoreBtn.innerHTML ='Свернуть все';
-					}
-				});
-			}
+	if (dropSelect.length > 0) {
+	dropSelect.forEach((select) => {
+		const selectBtn = select.querySelector('.drop-select__btn');
+		const selectMoreBtn = select.querySelector('.drop-select-more');
+
+		// Функция для открытия списка
+		const openSelect = () => {
+		select.classList.add('open');
+		if (select.classList.contains('drop-select--show-more') && selectMoreBtn) {
+			// Для блоков с "Показать еще", открываем частично и ставим кнопку "Показать еще"
+			select.classList.remove('open--full');
+			selectMoreBtn.innerHTML = 'Показать еще';
+			selectMoreBtn.classList.remove('drop-select-close');
+		} else if (selectMoreBtn) {
+			// Для блоков без "Показать еще", сразу показываем весь список
+			select.classList.add('open--full');
+			selectMoreBtn.innerHTML = 'Свернуть все';
+			selectMoreBtn.classList.add('drop-select-close');
 		}
+		};
+
+		// Функция для закрытия списка
+		const closeSelect = () => {
+		select.classList.remove('open');
+		select.classList.remove('open--full');
+		};
+
+		// Клик по кнопке открытия/закрытия списка
+		selectBtn.addEventListener('click', () => {
+		if (select.classList.contains('open')) {
+			closeSelect();
+		} else {
+			openSelect();
+		}
+		});
+
+		// Логика для кнопки "Показать еще/Свернуть все"
+		if (selectMoreBtn) {
+		selectMoreBtn.addEventListener('click', () => {
+			if (select.classList.contains('open--full')) {
+			// Если список развернут, сворачиваем его и удаляем классы
+			closeSelect();
+			} else {
+			// Если список свернут, разворачиваем его
+			select.classList.add('open--full');
+			selectMoreBtn.innerHTML = 'Свернуть все';
+			selectMoreBtn.classList.add('drop-select-close');
+			}
+		});
+		}
+	});
 	}
+
+
+
 });
