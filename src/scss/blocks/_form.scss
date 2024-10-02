@@ -196,7 +196,8 @@ select:-webkit-autofill:focus {
 .open .custom-options{
   margin-top: -7px;
   border: 1px solid $sec;
-  padding-top: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .custom-options {
   position: absolute;
