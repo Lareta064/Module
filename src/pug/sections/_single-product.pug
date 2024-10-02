@@ -1,0 +1,43 @@
+section.single-product
+	.container
+		+brcr('Главная', 'Каталог','Кирпич', 'Клинкерный', 'Кирпич клинкерный ЛСР Мюнхен')
+		.single-product-description
+
+section.objects-slider
+	.container
+		h2.h2 Из этого материала построили
+		.section-swiper
+			.objects-swiper.swiper
+				.swiper-wrapper
+					.swiper-slide
+						a(href="#!").gallery-card
+							.gallery-card__img
+								img(src="./img/gallery2.webp", srcset="/img/gallery2@2x.webp 2x"  width="513" height="332" alt="alt")
+							.gallery-card__title Жилой квартал «Весна»
+					.swiper-slide
+						a(href="#!").gallery-card
+							.gallery-card__img
+								img(src="./img/gallery3.webp", srcset="/img/gallery3@2x.webp 2x"  width="513" height="332" alt="alt")
+							.gallery-card__title Жилой квартал «Сталинка»
+					.swiper-slide
+						a(href="#!").gallery-card
+							.gallery-card__img
+								img(src="./img/gallery4.webp", srcset="/img/gallery4@2x.webp 2x"  width="513" height="332" alt="alt")
+							.gallery-card__title Жилой квартал «Этажи»
+					.swiper-slide
+						a(href="#!").gallery-card
+							.gallery-card__img
+								img(src="./img/gallery5.webp", srcset="/img/gallery5@2x.webp 2x"  width="513" height="332" alt="alt")
+							.gallery-card__title Жилой квартал «София»
+					.swiper-slide
+						a(href="#!").gallery-card
+							.gallery-card__img
+								img(src="./img/gallery6.webp", srcset="/img/gallery6@2x.webp 2x"  width="513" height="332" alt="alt")
+							.gallery-card__title ЖК «Произведение на Первомайской»	
+			//===slider nav arrows ===
+			.slider-arrows
+				button.btn-prev.objects-slider-prev
+					+svg('chevronLeft')
+				
+				button.btn-next.objects-slider-next
+					+svg('chevronRight')
