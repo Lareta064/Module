@@ -4,8 +4,13 @@ section.category
 		.section-title.inline-row
 			h2.h2 Клинкерный кирпич
 			p.bold-gray 870 товаров
+		
 		.aside-grid
-			.aside-grid__column
+			#filter-popup.aside-grid__column.aside-grid--popup
+				.aside-grid-header.flex-row
+					p.bold-18 Фильтр
+					button.close-btn
+						+svg('cross')
 				form.filter
 					.filters-menu-wrapper
 						.filter-title Кирпич
@@ -141,23 +146,38 @@ section.category
 			//=== MAIN CONTENT ===
 			.aside-grid__main
 				.sorting-filters
-					.sorting-types.flex-row
+					//===== КНОПКА ОТКРЫТИЯ ФИЛЬТРА НА МОБ ВЕРСИИ ===
+					button.btn-outline#filter-popup-btn Фильтр
+						+svg('filter')
+					//=== СОРТИРОВКА НА ЭКРАНАХ > 1024 ===
+					.sorting-types-desktop.flex-row
 						p.bold-18 Сортировка
 						.sorting-list.flex-row
 							a(href="#!").sorting-list-item.active По популярности
 							a(href="#!").sorting-list-item Сначала дешевые
 							a(href="#!").sorting-list-item Сначала дорогие
-
 					
-					.drop-select
+					//=== СОРТИРОВКА- ВЫПАДАШКА НА ЭКРАНАХ < 1024 ===
+					.drop-select.sorting-types-mobile
+						.custom-select
+							.custom-select-trigger Сортировка
+							.custom-options
+								span.custom-option(data-value="По_популярности") По популярности
+								span.custom-option(data-value="дешевые") Сначала дешевые
+								span.custom-option(data-value="дорогие") Сначала дорогие
+								
+					//=== ВЫБОР КОЛИЧЕСТВА КАРТОЧЕК===
+					.drop-select.sorting-count
 						p.bold-18 Показать
-						.custom-select.sorting-count
+						.custom-select
 							.custom-select-trigger 24
 							.custom-options
 								span.custom-option(data-value="24") 24
 								span.custom-option(data-value="32") 32
 								span.custom-option(data-value="48") 48
 								span.custom-option(data-value="64") 64
+				
+				//=====CARDS WRAPPER ===
 				.category-cards.three-columns-grid
 					
 					+prod-card(1, 'Кирпич, Солома 1 НФ', 'Старый Оскол', 44)

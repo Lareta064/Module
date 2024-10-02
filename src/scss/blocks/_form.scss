@@ -163,8 +163,8 @@ select:-webkit-autofill:focus {
   background: white;
   z-index: 2;
   border-radius: 12px;
-  padding: 5px 16px;
-  width: 90px;
+  padding: 5px 24px 5px 16px;
+  
   height: 54px;
   position: relative;
   color: $sec;
@@ -174,18 +174,21 @@ select:-webkit-autofill:focus {
 .custom-select-trigger:after {
   content: '';
   display: inline-block;
-  width: 14px;
-  height: 7px;
+  width: 24px;
+  height:24px;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='7' viewBox='0 0 14 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13 6L7.84853 0.848528C7.3799 0.379898 6.6201 0.379898 6.15147 0.848527L0.999999 6' stroke='%23000000' stroke-linecap='round' /%3e%3c/svg%3e");
   position: absolute;
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
   right: 16px;
-  top: 22px;
+  top: 50%;
   pointer-events: none;
-  transform: rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
   z-index: 3;
 }
 
-.open .custom-select-trigger:after { transform: rotate(0);}
+.open .custom-select-trigger:after { transform:translateY(-50%) rotate(0);}
 
  
 
@@ -207,7 +210,6 @@ select:-webkit-autofill:focus {
   -webkit-transition: max-height 0.3s ease;
   transition: max-height 0.2s ease;
   z-index: 1;
-  
   border-radius: 0 0 12px 12px;
   
   z-index: 1;
@@ -218,4 +220,8 @@ select:-webkit-autofill:focus {
   padding: 5px 16px;
   display: block;
   cursor: pointer;
+  @media (max-width: 1023px) {
+   font-size: 14px;
+  padding: 5px 12px;
+  }
 }

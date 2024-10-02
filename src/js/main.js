@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function (){
 	const catalogyBtnDesktop = document.getElementById('cat-btn-desk');
 	const catalogyMenu = document.getElementById('cat-menu');
 	const catMenuCloseMobile = document.querySelector('#close-cat-menu');
+	const filterPopup = document.getElementById('filter-popup');
 	const bodyEl = document.body;
 	
 	if (menuToggle) {
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			    mobileMenu.classList.add('active');
 				bodyEl.classList.add('lock');
 				catalogyMenu.classList.remove('active');
+				if(filterPopup){filterPopup.classList.remove('active');}
 			}
 		});
 		
@@ -49,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function (){
 				catalogyMenu.classList.add('active');
 				mobileMenu.classList.remove('active');
 				menuToggle.classList.remove('active');
+				if(filterPopup){filterPopup.classList.remove('active');}
 				bodyEl.classList.add('lock');
 			}
 		});
@@ -228,5 +231,18 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		});
 	}
-
+    //=====FILTER POPUP ===
+	
+	if(filterPopup){
+		const filterOpenBtn = document.getElementById('filter-popup-btn');
+		const filterCloseBtn = filterPopup.querySelector('.close-btn');
+		filterOpenBtn.addEventListener('click', ()=>{
+			filterPopup.classList.add('active');
+			bodyEl.classList.add('lock');
+		});
+		filterCloseBtn.addEventListener('click', ()=>{
+			filterPopup.classList.remove('active');
+			bodyEl.classList.remove('lock');
+		});
+	}
 });
