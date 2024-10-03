@@ -1,0 +1,59 @@
+section.single-object
+	.container
+		+brcr('Главная', 'Галерея','Жилой квартал «Весна»')
+		h2.h3 Жилой квартал «Весна»	
+		.single-object-description
+			//===slider wrapper =====
+			.object-slider-wrapper
+				.swiper.single-object-slider
+					.swiper-wrapper
+						.swiper-slide
+							a(href="./img/object1.webp" data-fancybox="gallery")
+								img.lazy.wh-100(src='./img/object1.webp' srcset="./img/object1@2x.webp 2x" width="930" height="580" alt="img")
+						.swiper-slide
+							a(href="./img/object2.webp" data-fancybox="gallery")
+								img.lazy.wh-100(src='./img/object2.webp' srcset="./img/object2@2x.webp 2x" width="930" height="580" alt="img")
+						.swiper-slide
+							a(href="./img/object3.webp" data-fancybox="gallery")
+								img.lazy.wh-100(src='./img/object3.webp' srcset="./img/object3@2x.webp 2x" width="930" height="580" alt="img")
+						.swiper-slide
+							a(href="./img/object4.webp" data-fancybox="gallery")
+								img.lazy.wh-100(src='./img/object4.webp' srcset="./img/object4@2x.webp 2x" width="930" height="580" alt="img")
+						.swiper-slide
+							a(href="./img/object5.webp" data-fancybox="gallery")
+								img.lazy.wh-100(src='./img/object5.webp' srcset="./img/object5@2x.webp 2x" width="930" height="580" alt="img")
+						.swiper-slide
+							a(href="./img/object6.webp" data-fancybox="gallery")
+								img.lazy.wh-100(src='./img/object6.webp' srcset="./img/object6@2x.webp 2x" width="930" height="580" alt="img")
+					
+					//===slider nav arrows ===
+					.slider-arrows
+						button.btn-prev.product-button-prev
+							+svg('chevronLeft')
+						button.btn-next.product-button-next
+							+svg('chevronRight')
+				.swiper.object-slider-thumb(thumbsslider)
+					.swiper-wrapper
+						.swiper-slide
+							img.lazy(src='./img/object1-thumb.webp' srcset="./img/object1-thumb@2x.webp 2x" width="217" height="136" alt="img")
+						.swiper-slide
+							img.lazy(src='./img/object2.webp' srcset="./img/object2@2x.webp 2x" width="217" height="136" alt="img")
+						.swiper-slide
+							img.lazy(src='./img/object3.webp' srcset="./img/object3@2x.webp 2x" width="217" height="136" alt="img")
+						.swiper-slide
+							img.lazy(src='./img/object4.webp' srcset="./img/object4@2x.webp 2x" width="217" height="136" alt="img")
+						.swiper-slide
+							img.lazy(src='./img/object5.webp' srcset="./img/object5@2x.webp 2x" width="217" height="136" alt="img")
+						.swiper-slide
+							img.lazy(src='./img/object6.webp' srcset="./img/object6@2x.webp 2x" width="217" height="136" alt="img")
+						.swiper-slide
+							img.lazy(src='./img/object7.webp' srcset="./img/object7@2x.webp 2x" width="217" height="136" alt="img")
+						.swiper-slide
+							img.lazy(src='./img/object8.webp' srcset="./img/object8@2x.webp 2x" width="217" height="136" alt="img")
+						.swiper-slide
+							img.lazy(src='./img/object9.webp' srcset="./img/object9@2x.webp 2x" width="217" height="136" alt="img")
+						.swiper-slide
+							img.lazy(src='https://i.ytimg.com/vi/-L46fs7Pukw/maxresdefault.jpg' srcset="https://i.ytimg.com/vi/-L46fs7Pukw/maxresdefault.jpg" width="217" height="136" alt="img")
+			//==== deskription===
+			.single-object-info
+				

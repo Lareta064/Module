@@ -23,6 +23,12 @@ body {
 	background-color: $sec2;
 	-webkit-font-smoothing: antialiased;
 	font-variant-numeric: lining-nums;
+	opacity: 0;
+	animation-name: opac;
+	animation-duration: .5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	
 	@media (max-width: 767px) {
 	 font-size: 14px;
 	}
@@ -42,11 +48,11 @@ main.main{padding-top: 0;}
 	padding-top: 120px;
 	@media (max-width: 1199px) {
 	 padding-top: 100px;
-	 padding-bottom: 100px;
+	 
 	}
 	@media (max-width: 767px) {
-		padding-top: 40px;
-		padding-bottom: 40px;
+		padding-top: 60px;
+		
 	}
 }
 .inner-main h2, .inner-main .h2{margin-bottom: 40px; 

@@ -172,7 +172,8 @@ document.addEventListener("DOMContentLoaded", function (){
       freeMode: true,
       watchSlidesProgress: true,
     });
-    var productSlider = new Swiper(".product-slider", {
+   
+	var productSlider = new Swiper(".product-slider", {
       spaceBetween: 10,
 	  speed:600,
       navigation: {
@@ -183,5 +184,23 @@ document.addEventListener("DOMContentLoaded", function (){
         swiper: productSliderThumb,
       },
     });
-	
+
+	/* SINGLE OBJECT SLIDER THUMB*/
+	var objectSliderThumb = new Swiper(".object-slider-thumb", {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    var singleObjectSlider = new Swiper(".single-object-slider", {
+      spaceBetween: 10,
+	  speed:600,
+      navigation: {
+        nextEl: ".single-object-next",
+        prevEl: ".single-object-prev",
+      },
+      thumbs: {
+        swiper: objectSliderThumb,
+      },
+    });
 });
