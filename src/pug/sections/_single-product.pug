@@ -2,6 +2,43 @@ section.single-product
 	.container
 		+brcr('Главная', 'Каталог','Кирпич', 'Клинкерный', 'Кирпич клинкерный ЛСР Мюнхен')
 		.single-product-description
+			.product-slider-wrapper
+				.swiper.product-slider
+					.swiper-wrapper
+						.swiper-slide
+							img.lazy(src='./img/product1.webp' srcset="./img/product1@2x.webp 2x" width="690" height="540" alt="img")
+						.swiper-slide
+							img.lazy(src='./img/single-cat2.webp' srcset="./img/single-cat2@2x.webp 2x" width="690" height="540" alt="img")
+						.swiper-slide
+							img.lazy(src='./img/product3.webp' srcset="./img/product3@2x.webp 2x" width="690" height="540" alt="img")
+						.swiper-slide
+							img.lazy(src='./img/cat-img.webp' srcset="./img/cat-img@2x.webp 2x" width="690" height="540" alt="img")
+						.swiper-slide
+							img.lazy(src='./img/product1.webp' srcset="./img/product1@2x.webp 2x" width="690" height="540" alt="img")
+						.swiper-slide
+							img.lazy(src='./img/single-cat3.webp' srcset="./img/single-cat3@2x.webp 2x" width="690" height="540" alt="img")
+					
+					//===slider nav arrows ===
+					.slider-arrows
+						button.btn-prev.product-button-prev
+							+svg('chevronLeft')
+						button.btn-next.product-button-next
+							+svg('chevronRight')
+				.swiper.product-slider-thumb(thumbsslider)
+					.swiper-wrapper
+						.swiper-slide
+							img.lazy(src='./img/product1.webp' srcset="./img/product1@2x.webp 2x" width="173" height="132" alt="img")
+						.swiper-slide
+							img.lazy(src='./img/single-cat2.webp' srcset="./img/single-cat2@2x.webp 2x" width="173" height="132" alt="img")
+						.swiper-slide
+							img.lazy(src='./img/product3.webp' srcset="./img/product3@2x.webp 2x" width="173" height="132" alt="img")
+						.swiper-slide
+							img.lazy(src='./img/cat-img.webp' srcset="./img/cat-img@2x.webp 2x" width="173" height="132" alt="img")
+						.swiper-slide
+							img.lazy(src='./img/product1.webp' srcset="./img/product1@2x.webp 2x" width="173" height="132" alt="img")
+						.swiper-slide
+							img.lazy(src='./img/single-cat3.webp' srcset="./img/single-cat3@2x.webp 2x" width="173" height="132" alt="img")
+						
 
 section.objects-slider
 	.container

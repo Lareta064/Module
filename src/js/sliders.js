@@ -165,6 +165,23 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		}
 	});
-
+    /* SINGLE PRODUCT SLIDER THUMB*/
+	var productSliderThumb = new Swiper(".product-slider-thumb", {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    var productSlider = new Swiper(".product-slider", {
+      spaceBetween: 10,
+	  speed:600,
+      navigation: {
+        nextEl: ".product-button-next",
+        prevEl: ".product-button-prev",
+      },
+      thumbs: {
+        swiper: productSliderThumb,
+      },
+    });
 	
 });
