@@ -1,0 +1,19 @@
+extends ../layouts/layout.pug
+
+block content
+	.page-wrapper
+		include ../sections/_header.pug
+		//=============MAIN===========
+		main.inner-main
+			include ../sections/_contacts-page
+			
+		include ../sections/_footer.pug
+
+
+
+
+
+		
+	
+block variables
+	-var title = "Контакты";

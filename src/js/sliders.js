@@ -165,7 +165,36 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		}
 	});
-    /* SINGLE PRODUCT SLIDER THUMB*/
+		new Swiper('.showroom-slider',{
+		slidesPerView: 1,
+		spaceBetween: 10,
+		speed: 600,
+		navigation: {
+            nextEl: '.contacts-slider-next',
+            prevEl: '.contacts-slider-prev',
+        },
+		breakpoints: {
+			768: {
+			slidesPerView: 1.8,
+			spaceBetween: 20,
+			},
+			992: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+			},
+			1199:{
+				slidesPerView: 2.5,
+			    spaceBetween: 20,
+			},
+			1280:{
+				slidesPerView: 3,
+			    spaceBetween: 20,
+			}
+		}
+	});
+    
+	
+	/* SINGLE PRODUCT SLIDER THUMB*/
 	var productSliderThumb = new Swiper(".product-slider-thumb", {
       spaceBetween: 10,
       slidesPerView: 4,

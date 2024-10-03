@@ -1,0 +1,57 @@
+section.contacts-page
+	.container
+		+brcr('Главная', 'Контакты')
+		h2.h3 Контакты
+		.contacts-page-row.flex-row
+			.contacts-card
+				.contacts-block
+					p.icon-txt
+						+svg('pin')
+						span 362013, Респ. Северная Осетия — Алания, г. Владикавказ, Черменское ш., 2
+					p.icon-txt.phone-group
+						+svg('phone')
+						span.phone-numbers
+							a(href="#!") +7 (918) 829-99-30,
+							a(href="#!") +7 (8672) 51-97-70,
+							a(href="#!") +7 (8672) 76-23-05
+					a(href="#!").icon-link
+						+svg('email')
+						span info@module.ru
+					p.icon-txt
+						+svg('clock')
+						span Время работы: 9.00 - 18.00 /  Выходной: воскресенье
+
+				.location-pin
+					a(href="#!").icon-link 
+						+svg('location')
+						span На карте
+			a(href="#!" download).btn Скачать реквизиты
+				+svg('download')
+.map
+	img.wh-100(src="./img/map.webp", width="690" height="420" alt="")
+section.showroom
+	.container
+		h2.h3 Шоурум
+		.section-slider
+			.showroom-slider.swiper
+				.swiper-wrapper
+					.swiper-slide
+						img(src="./img/room1.webp", srcset="./img/room1@2x.webp 2x" alt="img" width="454" height="288")
+					.swiper-slide
+						img(src="./img/room1.webp", srcset="./img/room1@2x.webp 2x" alt="img" width="454" height="288")
+					.swiper-slide
+						img(src="./img/room2.webp", srcset="./img/room2@2x.webp 2x" alt="img" width="454" height="288")
+					.swiper-slide
+						img(src="./img/room3.webp", srcset="./img/room3@2x.webp 2x" alt="img" width="454" height="288")
+					.swiper-slide
+						img(src="./img/room1.webp", srcset="./img/room1@2x.webp 2x" alt="img" width="454" height="288")
+					.swiper-slide
+						img(src="./img/room2.webp", srcset="./img/room2@2x.webp 2x" alt="img" width="454" height="288")
+			//===slider nav arrows ===
+			.slider-arrows
+				button.btn-prev.contacts-slider-prev
+					+svg('chevronLeft')
+				
+				button.btn-next.contacts-slider-next
+					+svg('chevronRight')
+

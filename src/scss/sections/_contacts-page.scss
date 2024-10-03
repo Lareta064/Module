@@ -1,0 +1,24 @@
+.contacts-page-row{
+	justify-content: space-between;
+	margin-bottom: -250px;
+	position: relative;
+	
+	.btn{width: fit-content;}
+}
+.showroom{
+	.swiper img{border-radius: 20px}
+	.section-slider{
+		position: relative;
+		img{
+			aspect-ratio: 53 / 36;
+		}
+		}
+	.slider-arrows{
+		position: absolute;
+		top:50%;
+		transform: translateY(-50%);
+		left: -64px;
+		right: -64px;
+		justify-content: space-between;
+	}
+}
