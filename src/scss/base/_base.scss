@@ -139,13 +139,13 @@ input[type="submit"] {
 	cursor: pointer;
 }
 
-// input[type="radio"],
-// input[type='checkbox'],
-// input[type="submit"] {
-// 	appearance: none;
-// 	-moz-appearance: none;
-// 	-webkit-appearance: none;
-// }
+input[type="radio"],
+input[type='checkbox'],
+input[type="submit"] {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
 /* vendore class*/
 .d-grid{
 	display: grid;
@@ -183,3 +183,6 @@ input[type="submit"] {
 }
 .w-100{width: 100%!important; max-width: 100%!important;}
 .pb-0{padding-block:0!important;}
+.mb-0 {
+	margin-block: 0 !important;
+}

@@ -1,7 +1,13 @@
+mixin table-row(txt1, txt2)
+	.deskription-table-row
+		p.cell-name Фактура
+		span.cell-space
+		p.cell-value Береста, каре, кора, рустик
 section.single-product
 	.container
 		+brcr('Главная', 'Каталог','Кирпич', 'Клинкерный', 'Кирпич клинкерный ЛСР Мюнхен')
 		.single-product-description
+			//===slider wrapper =====
 			.product-slider-wrapper
 				.swiper.product-slider
 					.swiper-wrapper
@@ -38,11 +44,29 @@ section.single-product
 							img.lazy(src='./img/product1.webp' srcset="./img/product1@2x.webp 2x" width="173" height="132" alt="img")
 						.swiper-slide
 							img.lazy(src='./img/single-cat3.webp' srcset="./img/single-cat3@2x.webp 2x" width="173" height="132" alt="img")
+			
+			//==== deskription===			
+			.deskription-card
+				.deskription-table-card
+					h2.h3.mb-0 Кирпич клинкерный ЛСР Мюнхен
+					p.bold-24.txt-pr1 коричневый береста 250*85*65 мм
+					.deskription-table
+						.bold-24 Характеристики:
 						
-
+						.deskription-table-body
+							+table-row('Фактура', 'Береста, каре, кора, рустик')
+							+table-row('Размер, мм', '250*85*65')
+							+table-row('Формат', '0,71 НФ')
+							+table-row('Марка прочности', 'М300')
+							+table-row('Водопоглощение', '<6%')
+							+table-row('Морозостойкость', 'F100')
+							+table-row('Вес. ед. изделия, кг', '2.5')
+						
+				
+				.deskription-card-footer
 section.objects-slider
 	.container
-		h2.h2 Из этого материала построили
+		h2.h3 Из этого материала построили
 		.section-swiper
 			.objects-swiper.swiper
 				.swiper-wrapper

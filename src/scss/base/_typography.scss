@@ -32,6 +32,12 @@
 }
 .h3 {
 	font-size: 42px;
+	@media (max-width: 1199px) {
+	font-size: 36px;
+	}
+	@media (max-width: 767px) {
+	font-size: 28px;
+	}
 	
 }
 .h4{
@@ -77,6 +83,7 @@
 .txt-semi{font-weight: 600!important;}
 .txt-medium {font-weight: 500!important;}
 .txt-gray, .bold-gray{color: $sec;}
+.txt-pr1{color: $pr1!important;}
 /*LINKS*/
 .link, .icon-link{
 	display: inline-flex;
