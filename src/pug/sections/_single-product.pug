@@ -1,11 +1,14 @@
 mixin table-row(txt1, txt2)
 	.deskription-table-row
-		p.cell-name Фактура
+		p.cell-name !{txt1}
 		span.cell-space
-		p.cell-value Береста, каре, кора, рустик
+		p.cell-value !{txt2}
 section.single-product
 	.container
 		+brcr('Главная', 'Каталог','Кирпич', 'Клинкерный', 'Кирпич клинкерный ЛСР Мюнхен')
+		.section-title
+			h2.h3.mb-0 Кирпич клинкерный ЛСР Мюнхен
+			p.bold-24.txt-pr1 коричневый береста 250*85*65 мм
 		.single-product-description
 			//===slider wrapper =====
 			.product-slider-wrapper
@@ -48,8 +51,9 @@ section.single-product
 			//==== deskription===			
 			.deskription-card
 				.deskription-table-card
-					h2.h3.mb-0 Кирпич клинкерный ЛСР Мюнхен
-					p.bold-24.txt-pr1 коричневый береста 250*85*65 мм
+					.deskription-card-title
+						h2.h3.mb-0 Кирпич клинкерный ЛСР Мюнхен
+						p.bold-24.txt-pr1 коричневый береста 250*85*65 мм
 					.deskription-table
 						.bold-24 Характеристики:
 						
@@ -63,7 +67,9 @@ section.single-product
 							+table-row('Вес. ед. изделия, кг', '2.5')
 						
 				
-				.deskription-card-footer
+				.deskription-card-footer Цена: 
+					.price-item 44
+						span &#8381;/шт
 section.objects-slider
 	.container
 		h2.h3 Из этого материала построили
