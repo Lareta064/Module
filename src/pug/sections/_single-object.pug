@@ -4,7 +4,7 @@ section.single-object
 		h2.h3 Жилой квартал «Весна»	
 		.single-object-description
 			//===slider wrapper =====
-			.object-slider-wrapper
+			.object-slider-wrapper.fancyslider
 				.swiper.single-object-slider
 					.swiper-wrapper
 						.swiper-slide
@@ -22,15 +22,28 @@ section.single-object
 						.swiper-slide
 							a(href="./img/object5.webp" data-fancybox="gallery")
 								img.lazy.wh-100(src='./img/object5.webp' srcset="./img/object5@2x.webp 2x" width="930" height="580" alt="img")
+						
 						.swiper-slide
 							a(href="./img/object6.webp" data-fancybox="gallery")
 								img.lazy.wh-100(src='./img/object6.webp' srcset="./img/object6@2x.webp 2x" width="930" height="580" alt="img")
+						.swiper-slide
+							a(href="./img/object7.webp" data-fancybox="gallery")
+								img.lazy.wh-100(src='./img/object7.webp' srcset="./img/object7@2x.webp 2x" width="930" height="580" alt="img")
+						.swiper-slide
+							a(href="./img/object8.webp" data-fancybox="gallery")
+								img.lazy.wh-100(src='./img/object8.webp' srcset="./img/object8@2x.webp 2x" width="930" height="580" alt="img")
+						.swiper-slide
+							a(href="./img/object9.webp" data-fancybox="gallery")
+								img.lazy.wh-100(src='./img/object9.webp' srcset="./img/object9@2x.webp 2x" width="930" height="580" alt="img")
+						.swiper-slide
+							a(href="./img/object10.webp" data-fancybox="gallery")
+								img.lazy.wh-100(src='./img/object10.webp' srcset="./img/object10@2x.webp 2x" width="930" height="580" alt="img")
 					
 					//===slider nav arrows ===
 					.slider-arrows
-						button.btn-prev.product-button-prev
+						button.btn-prev.single-object-prev
 							+svg('chevronLeft')
-						button.btn-next.product-button-next
+						button.btn-next.single-object-next
 							+svg('chevronRight')
 				.swiper.object-slider-thumb(thumbsslider)
 					.swiper-wrapper
@@ -53,7 +66,22 @@ section.single-object
 						.swiper-slide
 							img.lazy(src='./img/object9.webp' srcset="./img/object9@2x.webp 2x" width="217" height="136" alt="img")
 						.swiper-slide
-							img.lazy(src='https://i.ytimg.com/vi/-L46fs7Pukw/maxresdefault.jpg' srcset="https://i.ytimg.com/vi/-L46fs7Pukw/maxresdefault.jpg" width="217" height="136" alt="img")
+							img.lazy(src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZPCr8LLbW48UIhp3pbLbTFXysuNzCj2ApaQ&s' srcset="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZPCr8LLbW48UIhp3pbLbTFXysuNzCj2ApaQ&s" width="217" height="136" alt="img")
 			//==== deskription===
 			.single-object-info
+				.h5 Описание объекта
+				ul.info-list
+					li
+						p.bold-18 Адрес:
+						p.info-list-value г. Владикавказ, ул. Весенняя
+					li
+						p.bold-18 Застройщик:
+						p.info-list-value СТК-59
+				.info-text
+					p Жилой квартал «Весна» - это семь 9-этажных кирпичных зданий. Застройщиком спроектированы различные планировки — от одно — до трехкомнатных. Благоустройство прилегающей территории включает в себя организацию детских и спортивных площадок, зон отдыха и озеленение. Предусмотрены открытые гостевые парковки. В шаговой доступности находятся детские сады, школы, медицинские учреждения, аптеки, продовольственные магазины и парк.
 				
+				.single-object-links
+					.bold-18 Использовались материалы:
+					a(href="").link Кирпич клинкерный, 0,7NF
+					a(href="").link Многослойная черепица Технониколь
+					a(href="").link Утеплитель Технониколь Техноблок Стандарт

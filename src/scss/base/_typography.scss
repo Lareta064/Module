@@ -44,7 +44,11 @@
 	font-size: 28px;
 	
 }
-.bold-24, .medium-24, .semi-24, .reg-24,.bold-20,
+.h5{
+	@media (max-width: 767px) {
+		font-size: 18px;
+}}
+.h5,.bold-24, .medium-24, .semi-24, .reg-24,.bold-20,
 .medium-20,
 .semi-20,
 .reg-20 {
@@ -52,7 +56,7 @@
   font-size: 24px;
   line-height: 1.2;
 }
-.bold-24, .bold-20, .bold-18{font-weight: 700;}
+.h5, .bold-24, .bold-20, .bold-18{font-weight: 700;}
 .semi-24,.semi-20,.semi-18 {font-weight: 600;}
 .medium-24,.medium-20,.medium-18 {font-weight: 500;}
 .bold-18, .medium-18, .semi-18 {
@@ -124,4 +128,17 @@
 }
 .social-item:hover{
 	svg{color: $ac2!important;}
+}
+.info-list{
+	li{
+		display: flex;
+		align-items: center;
+		column-gap:20px;
+		font-size: 16px;
+		@media (max-width: 767px) {
+		font-size: 14px;
+		}
+	}
+  .bold-18{min-width: 120px;}
+  li+li{margin-top: 10px;}
 }
