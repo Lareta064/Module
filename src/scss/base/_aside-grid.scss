@@ -43,7 +43,8 @@
 		display: block;
 		transform: translateX(110%);
 		z-index: 5;
-		transition: .2s; 
+		transition: .2s;
+		padding-bottom: 40px;
 	  .aside-grid-header.flex-row{
 		display: flex;
 		justify-content: space-between;

@@ -245,4 +245,27 @@ document.addEventListener("DOMContentLoaded", function (){
 			bodyEl.classList.remove('lock');
 		});
 	}
+
+	const acordeon = document.querySelector('.acordion-wrapper');
+	if(acordeon){
+		const acordeonGroups = acordeon.querySelectorAll('.acordion-group');
+		for(let item of acordeonGroups){
+			const acordeonBtn = item.querySelector('.acordion-btn');
+			acordeonBtn.addEventListener('click', ()=>{
+				if(item.classList.contains('open')){
+					item.classList.remove('open');
+				}
+				else{item.classList.add('open');}
+			});
+		}
+		const openAcordeonBtn = document.getElementById('open-acordeon');
+		if(openAcordeonBtn){
+			openAcordeonBtn.addEventListener('click', ()=>{
+				acordeonGroups.forEach(function(item){
+					item.classList.add('open');
+				});
+			});
+		}
+	}
+
 });

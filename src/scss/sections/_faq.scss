@@ -1,0 +1,61 @@
+.acordion-group{
+	border: 1px solid $sec1;
+	background-color: #fff;
+	border-radius: 20px;
+	.acordion-btn{
+		cursor:pointer;
+		padding: 30px;
+		padding-right: 58px;
+		position: relative;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 1.2;
+		position: relative;
+		&:after{
+			content:'';
+			display: block;
+			width: 24px;
+			height: 24px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 28px;
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 0.5C12.5523 0.5 13 0.947715 13 1.5V11H22.5C23.0523 11 23.5 11.4477 23.5 12C23.5 12.5523 23.0523 13 22.5 13H13V22.5C13 23.0523 12.5523 23.5 12 23.5C11.4477 23.5 11 23.0523 11 22.5V13H1.5C0.947715 13 0.5 12.5523 0.5 12C0.5 11.4477 0.947715 11 1.5 11H11V1.5C11 0.947715 11.4477 0.5 12 0.5Z' fill='%2322231D' /%3e%3c/svg%3e");
+		}
+		@media (max-width: 1023px) {
+			font-size: 14px;
+			padding: 20px;
+			padding-right: 58px;
+			&:after{
+				right: 20px;
+			}
+		}
+	}
+	.acordion-body{
+		display: none;
+		overflow: hidden;
+		transition: .3s;
+		color: $pr;
+		padding: 30px;
+		padding-top: 0;
+		&>*+*{margin-top: 12px;}
+		@media (max-width: 1023px) {
+			padding: 20px;
+			padding-top: 0;
+			font-size: 14px;
+		}
+	}
+}
+.faq .section-title{justify-content: space-between;}
+.acordion-group +.acordion-group{margin-top: 10px;}
+.acordion-group.open{
+	.acordion-btn{
+		color: $ac2;
+		&:after{
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M24.5 13C25.0523 13 25.5 13.4477 25.5 14C25.5 14.5523 25.0523 15 24.5 15C11.5551 15 17.0934 15 3.5 15C2.94772 15 2.5 14.5523 2.5 14C2.5 13.4477 2.94772 13 3.5 13C17.0934 13 11.5551 13 24.5 13Z' fill='%23A4AB00' /%3e%3c/svg%3e");
+		}
+	}
+	.acordion-body {
+			display: block;
+		}
+}
