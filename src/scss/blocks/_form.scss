@@ -19,7 +19,7 @@ select:-webkit-autofill:focus {
 }
 .form-item{
   position: relative;
-  input{
+  input, textarea{
     display: block;
     width: 100%;
     font-family: $ff;
@@ -27,19 +27,79 @@ select:-webkit-autofill:focus {
     height: 54px;
     border-radius: 12px;
     padding-inline: 16px;
-    background-color: transparent;
+    background-color:white;
+    border:1px solid $sec1;
     &::placeholder{
       font-size: 16px;
       font-family: $ff;
-      color: inherit;
+      color: $sec;
     }
   }
+  textarea{
+    resize: none;
+    padding: 16px;
+    height: 140px;
+  }
 }
+.form-three-items{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap:20px;
+}
+.confirm-group{
+  .confirm-text{
+    align-self: flex-end;
+  }
+}
+.form-block{
+  display: flex;
+  flex-direction: column;
+  row-gap:20px;
+  &>*{width: 100%;}
+}
+/*custom-file-input*/
+.custom-file-input {
+  height: 140px;
+  border-radius: 20px;
+  background-color: white;
+  border:1px solid $sec;
+}
+
+.file-input {
+  display: none;
+  /* Прячем настоящий input */
+}
+
+.file-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.file-label:hover {
+  background-color: #0056b3;
+}
+
+.file-icon {
+  margin-right: 8px;
+  font-size: 20px;
+  /* Размер иконки */
+}
+
+.file-text {
+  font-size: 16px;
+}
+/*******search-form*********/
 .search-form{
   flex-grow: 1;
   input{
     padding-right: 84px;
-    border: 1px solid $sec1;
+    background-color: transparent;
     color: $sec2!important;
     &::-webkit-search-cancel-button {
        display: none;
@@ -70,6 +130,7 @@ select:-webkit-autofill:focus {
       display: block;
     }
 }
+/*******drop-filter*********/
 .drop-filter{
   position: relative;
   &__btn{
@@ -124,10 +185,10 @@ select:-webkit-autofill:focus {
 .drop-filter.open.open--full{
   .drop-filter__list{height: auto;}
 }
+/*custom-checkbox*/
 .custom-checkbox, .custom-radio{
   cursor: pointer;
   position: relative;
-  padding: 10px 20px;
   font-size: 16px;
   input[type='radio'], input[type='checkbox']{
     width: 0.1em;

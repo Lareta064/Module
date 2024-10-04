@@ -267,5 +267,13 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		}
 	}
+     /*custom fileInput*/
+	const fileInput = document.getElementById('file-input');
+	const fileLabel = document.querySelector('.file-label');
+	
+	fileInput.addEventListener('change', function() {
+		const fileName = fileInput.files[0]?.name || 'Прикрепить файл';
+		fileLabel.querySelector('.file-text').textContent = fileName;
+	});
 
 });
