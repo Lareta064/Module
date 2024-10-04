@@ -69,9 +69,16 @@ section.feedback-section
 					input(type="text" name="phone" placeholder="Телефон*")
 			.form-item
 				textarea(name="message" placeholder="Сообщение")
-			.custom-file-input
-				input#file-input.file-input(type='file')
-				label.file-label(for='file-input')
-					span.file-text Прикрепить файл
-					span.file-icon 📎
+			.file-upload-container
+				input#fileInput(type='file' accept='.pdf,.doc,.docx,.png,.jpg,.jpeg,.txt' hidden)
+				.upload-box#uploadBox
+					p Прикрепите или перетащите файл
+						+svg('book')
+					p (Форматы: PDF, DOC, DOCS, PNG, JPG, TXT. Вес: до 10 МБ)
+				.file-details#fileDetails(style='display: none;')
+					span#fileName
+						
+					button(type="button").remove-file.close-btn#removeFile
+						+svg('cross')
 
+			

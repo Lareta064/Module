@@ -268,12 +268,64 @@ document.addEventListener("DOMContentLoaded", function (){
 		}
 	}
      /*custom fileInput*/
-	const fileInput = document.getElementById('file-input');
-	const fileLabel = document.querySelector('.file-label');
-	
-	fileInput.addEventListener('change', function() {
-		const fileName = fileInput.files[0]?.name || 'Прикрепить файл';
-		fileLabel.querySelector('.file-text').textContent = fileName;
+	const fileInput = document.getElementById('fileInput');
+	const uploadBox = document.getElementById('uploadBox');
+	const fileDetails = document.getElementById('fileDetails');
+	const fileNameSpan = document.getElementById('fileName');
+	const removeFileButton = document.getElementById('removeFile');
+
+	// Открытие диалога выбора файла при клике на блок
+	uploadBox.addEventListener('click', () => {
+	fileInput.click();
+	});
+
+	// Обработка выбора файла через диалог
+	fileInput.addEventListener('change', handleFile);
+
+	// Обработка перетаскивания файла
+	uploadBox.addEventListener('dragover', (e) => {
+	e.preventDefault();
+	uploadBox.classList.add('dragover');
+	});
+
+	uploadBox.addEventListener('dragleave', () => {
+	uploadBox.classList.remove('dragover');
+	});
+
+	uploadBox.addEventListener('drop', (e) => {
+	e.preventDefault();
+	uploadBox.classList.remove('dragover');
+	const file = e.dataTransfer.files[0];
+	handleFileInput(file);
+	});
+
+	// Функция для обработки прикрепленного файла
+	function handleFile() {
+	const file = fileInput.files[0];
+	handleFileInput(file);
+	}
+
+	// Обработка файла и отображение деталей
+	function handleFileInput(file) {
+	if (file && isValidFileType(file) && file.size <= 10 * 1024 * 1024) {
+		fileNameSpan.textContent = file.name;
+		fileDetails.style.display = 'flex';
+	} else {
+		alert('Неверный формат файла или файл превышает 10 МБ');
+	}
+	}
+
+	// Проверка допустимого типа файла
+	function isValidFileType(file) {
+	const validTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'image/png', 'image/jpeg', 'text/plain'];
+	return validTypes.includes(file.type);
+	}
+
+	// Удаление файла
+	removeFileButton.addEventListener('click', () => {
+	fileInput.value = ''; // Сбрасываем значение input
+	fileNameSpan.textContent = ''; // Очищаем название файла
+	fileDetails.style.display = 'none'; // Прячем детали файла
 	});
 
 });

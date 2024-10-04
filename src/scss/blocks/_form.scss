@@ -58,42 +58,57 @@ select:-webkit-autofill:focus {
   &>*{width: 100%;}
 }
 /*custom-file-input*/
-.custom-file-input {
+.file-upload-container {
+  width: 100%;
+}
+
+.upload-box {
   height: 140px;
-  border-radius: 20px;
-  background-color: white;
-  border:1px solid $sec;
-}
-
-.file-input {
-  display: none;
-  /* Прячем настоящий input */
-}
-
-.file-label {
-  display: inline-flex;
+  width: 100%;
+  border: 1px solid $sec1;
+  background-color: #fff;
+  border-radius: 12px;
+  color: $sec;
+  display: flex;
+  row-gap:10px;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 8px 16px;
-  background-color: #007bff;
-  color: white;
-  border-radius: 4px;
   cursor: pointer;
+  text-align: center;
+}
+
+.upload-box.dragover {
+  background-color: #f0f0f0;
+  border-color: #666;
+}
+
+.file-details {
+  display: flex;
+  column-gap:20px;
+  margin-top: 20px;
+
+#fileName{
+  position: relative;
+  display: inline-flex;
+  align-items: flex-end;
+  column-gap:5px;
   font-size: 16px;
+  color: $pr;
+    &:before{
+      content:'';
+      display: block;
+      width: 22px;
+      height: 22px;
+      position: relative;
+      top: -2px;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.34163 3.85008C7.05604 3.85008 6.77215 3.97067 6.55537 4.2019C6.33714 4.43468 6.20725 4.75961 6.20725 5.10722V14.5005C6.55437 14.3198 6.94158 14.2215 7.34163 14.2215H16.5787V3.85008H7.34163ZM17.993 3.14293C17.993 2.75239 17.6764 2.43579 17.2858 2.43579H7.34163C6.65042 2.43579 5.99752 2.7291 5.52359 3.23462C5.05112 3.73859 4.79297 4.41291 4.79297 5.10722V16.8929C4.79297 17.5872 5.05112 18.2616 5.52359 18.7655C5.99752 19.2711 6.65042 19.5644 7.34163 19.5644H17.2858C17.6764 19.5644 17.993 19.2478 17.993 18.8572V3.14293ZM16.5787 15.6358H7.34163C7.05604 15.6358 6.77215 15.7564 6.55537 15.9876C6.33714 16.2204 6.20725 16.5453 6.20725 16.8929C6.20725 17.2405 6.33714 17.5655 6.55537 17.7982C6.77215 18.0295 7.05604 18.1501 7.34163 18.1501H16.5787V15.6358ZM7.7394 7.07151C7.7394 6.68096 8.056 6.36436 8.44654 6.36436H12.8662C13.2567 6.36436 13.5733 6.68096 13.5733 7.07151C13.5733 7.46205 13.2567 7.77865 12.8662 7.77865H8.44654C8.056 7.77865 7.7394 7.46205 7.7394 7.07151ZM7.7394 10.2144C7.7394 9.82382 8.056 9.50722 8.44654 9.50722H14.3394C14.7299 9.50722 15.0465 9.82382 15.0465 10.2144C15.0465 10.6049 14.7299 10.9215 14.3394 10.9215H8.44654C8.056 10.9215 7.7394 10.6049 7.7394 10.2144Z' fill='%2322231D' /%3e%3c/svg%3e");
+    }
+  }
+  .remove-file.close-btn:hover{opacity: .6;}
+  .remove-file.close-btn svg{color: $error;}
 }
 
-.file-label:hover {
-  background-color: #0056b3;
-}
-
-.file-icon {
-  margin-right: 8px;
-  font-size: 20px;
-  /* Размер иконки */
-}
-
-.file-text {
-  font-size: 16px;
-}
 /*******search-form*********/
 .search-form{
   flex-grow: 1;
