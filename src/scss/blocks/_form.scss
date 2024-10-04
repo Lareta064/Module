@@ -33,12 +33,15 @@ select:-webkit-autofill:focus {
       font-size: 16px;
       font-family: $ff;
       color: $sec;
+      color: reg;
+      font-weight: 700;
     }
   }
   textarea{
     resize: none;
     padding: 16px;
     height: 140px;
+    &:focus{outline: none;}
     @media (max-width: 767px) {
     height: 130px;
     }

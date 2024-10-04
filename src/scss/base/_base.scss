@@ -9,6 +9,7 @@
 
 html {
 	scroll-behavior: smooth;
+	
 }
 
 html,
@@ -84,11 +85,12 @@ main.main{padding-top: 0;}
 		padding-right: 0;
 	}
 }
-.container{
+.container, .container-narrow{
 	width: min(1440px, 100%);
 	padding-inline:20px;
 	margin-inline: auto;
 }
+.container-narrow{width: min(966px, 100%);}
 a,
 a:hover {
 	text-decoration: none;
