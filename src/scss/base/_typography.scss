@@ -51,7 +51,7 @@
 .h5,.bold-24, .medium-24, .semi-24, .reg-24,.bold-20,
 .medium-20,
 .semi-20,
-.reg-20 {
+.reg-20, .custom-content h2 {
   font-family: $ff;
   font-size: 24px;
   line-height: 1.2;
@@ -66,7 +66,7 @@
 .bold-20,
 .medium-20,
 .semi-20,
-.reg-20{font-size: 20px;}
+.reg-20, .custom-content h3{font-size: 20px;}
 .bold-18,
 .medium-18,
 .semi-18,
@@ -83,7 +83,7 @@
 	color: $ac2;
 }
 .txt-upper{text-transform: uppercase;}
-.bold-gray, .txt-bold, .accent-bold,.bold-14{font-weight: 700!important;}
+.custom-content h2, .custom-content h3, .bold-gray, .txt-bold, .accent-bold,.bold-14{font-weight: 700!important;}
 .txt-semi{font-weight: 600!important;}
 .txt-medium {font-weight: 500!important;}
 .txt-gray, .bold-gray{color: $sec;}
