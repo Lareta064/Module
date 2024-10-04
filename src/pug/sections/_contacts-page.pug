@@ -27,8 +27,8 @@ section.contacts-page
 						span На карте
 			a(href="download.txt" download).btn Скачать реквизиты
 				+svg('download')
-.map
-	img.wh-100(src="./img/map.webp", width="690" height="420" alt="")
+.map#map
+	// Карта загружается через скрипт, когда блок станет в зоне видимости
 section.showroom
 	.container
 		h2.h3 Шоурум
@@ -69,6 +69,7 @@ section.feedback-section
 					input(type="text" name="phone" placeholder="Телефон*")
 			.form-item
 				textarea(name="message" placeholder="Сообщение")
+			//=== прикрепить файл ====
 			.file-upload-container
 				input#fileInput(type='file' accept='.pdf,.doc,.docx,.png,.jpg,.jpeg,.txt' hidden)
 				.upload-box#uploadBox
@@ -81,4 +82,11 @@ section.feedback-section
 					button(type="button").remove-file.close-btn#removeFile
 						+svg('cross')
 
-			
+			.form-footer.flex-row
+				button.btn(type="submit") Отправить
+					+svg('email')
+				.confirm-group
+					label.custom-checkbox
+						input(type="checkbox" name="")
+						span.fake-input
+						span.confirm-text Согласен #[a(href="#!").link Политикой конфиденциальности ]

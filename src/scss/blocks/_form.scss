@@ -39,16 +39,29 @@ select:-webkit-autofill:focus {
     resize: none;
     padding: 16px;
     height: 140px;
+    @media (max-width: 767px) {
+    height: 130px;
+    }
   }
 }
 .form-three-items{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap:20px;
+  @media (max-width: 767px) {
+   grid-template-columns: 1fr;
+   row-gap:10px;
+  }
+  
 }
 .confirm-group{
+  .fake-input{
+    width: 16px;
+    height: 16px;
+  }
   .confirm-text{
     align-self: flex-end;
+    font-size: 14px;
   }
 }
 .form-block{
@@ -56,6 +69,18 @@ select:-webkit-autofill:focus {
   flex-direction: column;
   row-gap:20px;
   &>*{width: 100%;}
+  @media (max-width: 1023px) {
+  row-gap: 10px;
+  }
+}
+.form-footer.flex-row{
+  column-gap:20px;
+  @media (max-width: 767px) {
+  flex-direction: column-reverse;
+  row-gap:10px;
+  align-items: flex-start;padding-top: 20px;
+  .btn{width: 100%; max-width: 100%; }
+  }
 }
 /*custom-file-input*/
 .file-upload-container {
@@ -76,6 +101,9 @@ select:-webkit-autofill:focus {
   align-items: center;
   cursor: pointer;
   text-align: center;
+  @media (max-width: 767px) {
+      height: 130px;
+    }
 }
 
 .upload-box.dragover {
